@@ -1,0 +1,628 @@
+@mixin sp {
+  @media (max-width:(520px)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (max-width:(780px)) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (max-width:(1120px)) {
+    @content;
+  }
+}
+
+// base
+* {
+  word-break: break-word;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  font-size: 15px;
+  line-height: 1.8rem;
+  letter-spacing: 0.1em;
+  color: #656565;
+  scroll-behavior: smooth;
+
+  @include sp {
+    font-size: 13px;
+    line-height: 1.5rem;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  font-size: 15px;
+
+  @include sp {
+    font-size: 13px;
+    line-height: 1.5rem;
+
+  }
+}
+
+a {
+  color: #656565;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+
+  //hover-card
+  &.hover-cad {
+
+    .hover-img {
+
+      //はみ出した要素を表示させない
+      overflow: hidden;
+      width: 100%;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transform: scale(1);
+        transition: 0.3s;
+      }
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+
+.pc-block {
+  display: block;
+
+  @include tab {
+    display: none;
+  }
+}
+
+.sp-block {
+  display: none;
+
+  @include tab {
+    display: block;
+  }
+}
+
+
+// トップページのセクションタイトル
+.section-ttl {
+  color: #3071b9;
+  font-size: 40px;
+  font-weight: bold;
+  position: relative;
+  padding: 0 0 0 80px;
+
+  &::before {
+    content: url(../img/top/ttl-dec.png);
+    position: absolute;
+    top: -54px;
+    left: -29px;
+    transform: scale(0.4);
+  }
+
+  @include tab {
+    font-size: 24px;
+    padding: 0 0 0 40px;
+
+    &::before {
+      content: url(../img/top/ttl-dec.png);
+      position: absolute;
+      top: -55px;
+      left: -46px;
+      transform: scale(0.2);
+    }
+  }
+}
+
+
+// ボタン
+.arrow-button {
+  background-color: #fff;
+  border-radius: 50px;
+  color: #3071b9;
+  display: inline-block;
+  padding: 16px 8px 13px 0;
+  position: relative;
+  /* position: relative;で矢印の位置を基点とさせます */
+  text-align: center;
+  text-decoration: none;
+  width: 280px;
+  border: #3071b9 2px solid;
+
+  @include tab {
+    width: 240px;
+
+  }
+
+  &:after {
+    /* 擬似要素で矢印アイコンをつくる */
+    content: '';
+    border: 0;
+    border-top: solid 2px #3071b9;
+    border-right: solid 2px #3071b9;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    /* 矢印アイコンの位置を設定 */
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%) rotate(45deg);
+    /* rotate(45deg)で矢印を回転（向きを変更）させる */
+    transition: all 0.5s;
+  }
+
+  &:hover {
+    &:after {
+      right: 15px;
+    }
+  }
+}
+
+//  装飾
+.top-bg {
+  position: absolute;
+  width: 800px;
+  z-index: -1;
+
+  @include pc {
+    width: 60%;
+  }
+}
+
+
+// inputのリセットcss
+input[type="text"] {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* =================================
+下層ページ
+ ================================= */
+.sub-page {
+
+  &__ttl {
+    position: absolute;
+    z-index: 1;
+    top: 90px;
+    left: 80px;
+    color: #3071b9;
+    font-size: 40px;
+    font-weight: bold;
+
+    @include pc {
+      font-size: 32px;
+      left: 60px;
+    }
+
+    @include tab {
+      font-size: 26px;
+      left: 30px;
+      top: 62px;
+
+    }
+  }
+
+  &__main-visual {
+    height: 600px;
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    @media screen and (max-width: 1520px) {
+      height: 500px;
+      background-size: contain;
+    }
+
+    @include pc {
+      height: 400px;
+    }
+
+    @include tab {
+      height: 300px;
+    }
+
+    @include sp {
+      height: 200px;
+    }
+
+    &--company {
+      background-image: url(../img/company/main-visual-company.jpg);
+    }
+
+    &--services {
+      background-image: url(../img/company/main-visual-services.jpg);
+    }
+
+    &--outline {
+      background-image: url(../img/company/main-visual-outline.jpg);
+    }
+
+    &--history {
+      background-image: url(../img/company/main-visual-history.jpg);
+    }
+  }
+
+  &__main-visual-top {
+    position: absolute;
+    top: 0;
+  }
+
+  &__main-visual-bottom {
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+  }
+
+}
+
+// 下層タイトル
+.sub-page-ttl {
+  color: #3071b9;
+  font-size: 22px;
+  font-weight: bold;
+  position: relative;
+  padding: 0 0 0 40px;
+
+  &::before {
+    content: url(../img/top/ttl-dec.png);
+    position: absolute;
+    top: -57px;
+    left: -56px;
+    transform: scale(0.2);
+  }
+
+  &--section02 {
+    font-size: 20px;
+    display: inline-block;
+
+  
+    &::before {
+      content: url(../img/top/ttl-dec.png);
+      position: absolute;
+    }
+
+    &:after {
+      /* 擬似要素で矢印アイコンをつくる */
+      content: '';
+      border: 0;
+      border-top: solid 2px #3071b9;
+      border-right: solid 2px #3071b9;
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      /* 矢印アイコンの位置を設定 */
+      position: absolute;
+      top: 50%;
+      right: -25px;
+      transform: translateY(-50%) rotate(45deg);
+      /* rotate(45deg)で矢印を回転（向きを変更）させる */
+      transition: all 0.5s;
+
+      &:hover {
+        transform: translateY(-50%) rotate(45deg) translateX(5px);
+      }
+    }
+  }
+
+  &--section02 {
+    font-size: 20px;
+    display: inline-block;
+
+
+    @include tab{
+      font-size: 16px;
+      padding: 0 0 0 32px;
+    }
+
+    &::before {
+      content: url(../img/top/ttl-dec.png);
+      position: absolute;
+
+      @include tab{
+        top: -57px;
+        left: -56px;
+        transform: scale(0.15);
+      }
+    }
+
+    &:after {
+      /* 擬似要素で矢印アイコンをつくる */
+      content: '';
+      border: 0;
+      border-top: solid 2px #3071b9;
+      border-right: solid 2px #3071b9;
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      /* 矢印アイコンの位置を設定 */
+      position: absolute;
+      top: 50%;
+      right: -25px;
+      transform: translateY(-50%) rotate(45deg);
+      /* rotate(45deg)で矢印を回転（向きを変更）させる */
+      transition: all 0.5s;
+    }
+  }
+
+  &--section02-external {
+    font-size: 20px;
+    display: inline-block;
+
+    @include tab{
+      font-size: 16px;
+      padding: 0 0 0 32px;
+    }
+
+  
+    &::before {
+      content: url(../img/top/ttl-dec.png);
+      position: absolute;
+
+      @include tab{
+        top: -45px;
+        left: -56px;
+        transform: scale(0.15);
+      }
+    }
+
+    &:after {
+      content: url(../img/company/external-link.png);
+      position: absolute;
+      top: 0;
+      right: -26px;
+      transform: scale(1);
+
+      @include tab{
+        top: 2px;
+        right: -24px;
+
+      }
+    }
+  }
+}
+
+// ホバー写真拡大
+.hover-img {
+
+  //はみ出した要素を表示させない
+  overflow: hidden;
+  width: 100%;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+  }
+
+  &:hover img {
+    transform: scale(1.1);
+  }
+}
+
+// アニメーション　設定
+
+.fadeIn-anime01 {
+  animation-name: fadeInAnime;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.fadeIn-anime02 {
+  animation-name: fadeInAnime;
+  animation-delay: 0.7s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+
+
+}
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+//スクロースしたら表示
+
+.fadein-anime {
+  opacity: 0;
+  transform: translate(0, 30px);
+  transition: all 1s;
+
+  &.active {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  @include tab {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.fadein-anime02 {
+  opacity: 0;
+  transition: opacity 1s;
+  transition-delay: 1s;
+
+  &.active {
+    opacity: 1;
+  }
+
+  @include tab {
+    opacity: 1;
+  }
+}
+
+.fadein-anime03 {
+  opacity: 0;
+  transition: opacity 1s;
+  transition-delay: 1.2s;
+
+  &.active {
+    opacity: 1;
+  }
+
+  @include tab {
+    opacity: 1;
+  }
+}
+
+.fadein-anime04 {
+  opacity: 0;
+  transition: opacity 1s;
+  transition-delay: 1.4s;
+
+  &.active {
+    opacity: 1;
+  }
+
+  @include tab {
+    opacity: 1;
+  }
+}
+
+// エディタースタイル
+.content-style {
+  line-height: 32px;
+
+  &__block {
+    margin: 0 0 60px;
+
+    @include sp {
+      margin: 0 0 40px;
+    }
+  }
+
+  .aligncenter {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .alignright {
+    display: block;
+    margin-left: auto;
+  }
+
+  img {
+    width: auto;
+  }
+
+  p {
+    margin: 0 0 12px;
+    line-height: 22px;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 40px;
+
+
+    @include pc {
+      font-size: 22px;
+    }
+
+    @include tab {
+      font-size: 20px;
+    }
+  }
+
+  h2 {
+    font-size: 20px;
+    padding: 0 0 12px;
+    margin: 0 0 24px;
+    color: #3071b9;
+    font-weight: bold;
+
+    @include sp {
+      font-size: 18px;
+      margin: 0 0 16px;
+
+    }
+
+  }
+
+  h3 {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0 0 16px;
+
+    @include sp {
+      margin: 0 0 16px;
+
+    }
+
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  ol {
+    margin: 0 0 24px 24px;
+
+    li {
+      list-style: decimal;
+      line-height: 22px;
+    }
+  }
+
+  ul {
+    margin: 0 0 24px 24px;
+
+    li {
+      list-style: disc;
+      line-height: 22px;
+    }
+  }
+
+}
