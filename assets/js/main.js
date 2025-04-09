@@ -84,7 +84,7 @@ $(function () {
 
 
   // メインビジュアル　スライダー
-  $(".top-slider-js").slick({
+  $(".main-visual-js").slick({
     autoplay: true,
     autoplaySpeed: 5000,
     fade: false, // スライドをフェードイン・フェードアウト
@@ -125,25 +125,30 @@ $(function () {
   });
 
 
-  $(".main-visual-js").slick({
+  $(".top-recs-js").slick({
     autoplay: true,
     adaptiveHeight: true,
     centerMode: true,
-    centerPadding: "30%",
+    centerPadding: "12%",
     dots: false,
-    arrows: false,
+    arrows: true,
+    slidesToShow: 3,
+    variableWidth: true,
+    dots: true,
+
     responsive: [{
-        breakpoint: 1200,
+        breakpoint: 800,
         settings: {
-          arrows: false,
+          centerPadding: "12%",
+          slidesToShow: 2,
+
         }
       },
       {
         breakpoint: 800,
         settings: {
-          centerPadding: "20%",
-          arrows: false,
-
+          centerPadding: "2%",
+          slidesToShow: 1,
         }
       },
     ],
