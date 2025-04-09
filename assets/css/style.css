@@ -1879,9 +1879,6 @@ header
   color: #177139;
   font-weight: bold;
 }
-.header__right-menu:hover {
-  opacity: 0.7;
-}
 .header__right-menu::before {
   content: url(../img/top/search.svg);
   position: absolute;
