@@ -39,11 +39,12 @@
 </head>
 
 <body class="wrap">
+  <div class="black-bg"></div>
 
   <header class="header">
     <div class="header__inner">
       <h1 class="header__ttl-wrap header__item"><a href="index.html" class="header__ttl"><img
-            src="assets/img/top/logo.png" alt="みすほ屋"></a>
+            src="assets/img/top/logo.svg" alt="みすほ屋"></a>
       </h1>
       <nav class="header__menu-wrap header__item">
         <div class="header__menu-inner">
@@ -70,7 +71,7 @@
           </div>
         </div>
         <!-- アカウント -->
-        <div class="header__right-menu "><span class="account-btn-js">アカウント</span>
+        <div class="header__right-menu header__right-menu--account"><span class="account-btn-js">アカウント</span>
           <div class="header__account-wrap">
             <div class="header__account-batsu">
               ×
@@ -79,300 +80,209 @@
             <a href="" class="header__account-item">サインイン</a>
             <a href="" class="header__account-item">新規会員登録</a>
           </div>
-
         </div>
         <!-- カートボタン -->
-        <a href="" class="header__right-menu">カート</a>
-
-
-
+        <a href="" class="header__right-menu header__right-menu--cart">カート</a>
       </div>
-      <div class="header__btn-wrap header__item">
-        <button class="hamburger-menu" id="js-hamburger-menu">
-          <span class="hamburger-menu__bar"></span>
-          <span class="hamburger-menu__bar"></span>
-          <span class="hamburger-menu__bar"></span>
-        </button>
+      <div class="header__btn-wrap header__item open-btn-js" id="js-hamburger-menu">
+        <img src="assets/img/top/hun-btn.png" alt="">
       </div>
     </div>
 
     <div class="header-sp">
       <div class="header-sp__inner">
-        <ul class="header-sp__nav-list">
-          <li class="header-sp__nav-item"><a href="" class="header-sp__nav-link">協会概要</a></li>
-          <li class="header-sp__nav-item"><a href="" class="header-sp__nav-link">不動産鑑定士とは</a></li>
-          <li class="header-sp__nav-item header-sp__nav-item--margin"><a href="."
-              class="header-sp__nav-link">不動産鑑定士になるには</a></li>
-          <li class="header-sp__nav-item"><a href="" class="header-sp__nav-link">パンフレット不動産鑑定士やまぐち</a></li>
-          <li class="header-sp__nav-item"><a href="" class="header-sp__nav-link">出前講座</a></li>
-          <li class="header-sp__nav-item"><a href="" class="header-sp__nav-link">無料相談会</a></li>
-          <li class="header-sp__nav-item"><a href="" class="header-sp__nav-link">不動産鑑定無料相談所</a></li>
-          <li class="header-sp__nav-item"><a href="" class="header-sp__nav-link">地価公示・地価調査</a></li>
-          <li class="header-sp__nav-item"><a href="" class="header-sp__nav-link">地価要覧</a></li>
-          <li class="header-sp__nav-item"><a href="" class="header-sp__nav-link">山口県不動産市況ＤＩ調査</a></li>
-          <li class="header-sp__nav-item header-sp__nav-item--margin"><a href="" class="header-sp__nav-link">会員紹介</a>
-          </li>
-          <li class="header-sp__nav-item"><a href="" class="header-sp__nav-link">お知らせ一覧</a></li>
-          <li class="header-sp__nav-item"><a href="" class="header-sp__nav-link">お問い合わせ</a></li>
-          <li class="header-sp__nav-item"><a href="" class="header-sp__nav-link">アクセス</a></li>
-        </ul>
+        <div class="header-sp__btn-img">
+          <img src="assets/img/top/hun-btn-batsu.png" alt="閉じる">
+        </div>
+        <div class="header-sp__menu">
+          <a href="" class="header-sp__menu-item">メニュー</a>
+          <a href="" class="header-sp__menu-item">メニュー</a>
+          <a href="" class="header-sp__menu-item">メニュー</a>
+          <a href="" class="header-sp__menu-item">メニュー</a>
+          <a href="" class="header-sp__menu-item">メニュー</a>
+          <a href="" class="header-sp__menu-item">メニュー</a>
+          <a href="" class="header-sp__menu-item">メニュー</a>
+          <a href="" class="header-sp__menu-item">メニュー</a>
+          <a href="" class="header-sp__menu-item">メニュー</a>
+          <a href="" class="header-sp__menu-item">メニュー</a>
+          <a href="" class="header-sp__menu-item">メニュー</a>
+          <a href="" class="header-sp__menu-item">メニュー</a>
+          <a href="" class="header-sp__menu-item">メニュー</a>
+          <a href="" class="header-sp__menu-item">メニュー</a>
+          <a href="" class="header-sp__menu-item">メニュー</a>
+          <a href="" class="header-sp__menu-item">メニュー</a>
+          <a href="" class="header-sp__menu-item">メニュー</a>
+          <a href="" class="header-sp__menu-item">メニュー</a>
+          <a href="" class="header-sp__menu-item">メニュー</a>
+          <a href="" class="header-sp__menu-item">メニュー</a>
+          <a href="" class="header-sp__menu-item">メニュー</a>
+          <a href="" class="header-sp__menu-item">メニュー</a>
+          <a href="" class="header-sp__menu-item">メニュー</a>
+        </div>
       </div>
     </div>
   </header>
 
   <div class="main page-top">
+
+    <section class="top-btn">
+      <div class="top-btn__inner">
+        <a href="" class="top-btn__item">
+          <div class="top-btn__img">
+            <img src="assets/img/top/top-btn01.png" alt="おすすめ商品">
+          </div>
+          <p class="top-btn__ttl">おすすめ商品</p>
+        </a>
+        <a href="" class="top-btn__item">
+          <div class="top-btn__img">
+            <img src="assets/img/top/top-btn02.png" alt="お米">
+          </div>
+          <p class="top-btn__ttl">お米</p>
+        </a>
+        <a href="" class="top-btn__item">
+          <div class="top-btn__img">
+            <img src="assets/img/top/top-btn03.png" alt="厳選の食材や調味料">
+          </div>
+          <p class="top-btn__ttl">厳選の食材や<br>
+            調味料</p>
+        </a>
+        <a href="" class="top-btn__item">
+          <div class="top-btn__img">
+            <img src="assets/img/top/top-btn04.png" alt="オリジナルセット">
+          </div>
+          <p class="top-btn__ttl">オリジナルセット</p>
+        </a>
+        <a href="" class="top-btn__item">
+          <div class="top-btn__img">
+            <img src="assets/img/top/top-btn05.png" alt="ギフト">
+          </div>
+          <p class="top-btn__ttl">ギフト</p>
+        </a>
+        <a href="" class="top-btn__item">
+          <div class="top-btn__img">
+            <img src="assets/img/top/top-btn06.png" alt="季節商品">
+          </div>
+          <p class="top-btn__ttl">季節商品</p>
+        </a>
+        <a href="" class="top-btn__item">
+          <div class="top-btn__img">
+            <img src="assets/img/top/top-btn07.png" alt="関連商品">
+          </div>
+          <p class="top-btn__ttl">関連商品</p>
+        </a>
+      </div>
+    </section>
+
     <section class="main-visual">
       <div class="main-visual__slider-wrap">
         <div class="main-visual__slider top-slider-js">
           <a href="" class="main-visual__slider-item">
-            <img src="assets/img/top/top-slider01.png">
+            <img src="assets/img/top/top-slider01.jpg">
           </a>
           <a href="" class="main-visual__slider-item">
-            <img src="assets/img/top/top-slider01.png">
+            <img src="assets/img/top/top-slider02.jpg">
           </a>
           <a href="" class="main-visual__slider-item">
-            <img src="assets/img/top/top-slider01.png">
+            <img src="assets/img/top/top-slider03.jpg">
+          </a>
+          <a href="" class="main-visual__slider-item">
+            <img src="assets/img/top/top-slider04.jpg">
           </a>
         </div>
       </div>
     </section>
 
+    <section class="top-secret">
+      <div class="top-secret__wnner  top-secret-js">
+        <div class="top-secret__slider-item">
+          <img src="assets/img/top/top-secret01.jpg">
+        </div>
+        <div class="top-secret__slider-item">
+          <img src="assets/img/top/top-secret02.jpg">
+        </div>
+        <div class="top-secret__slider-item">
+          <img src="assets/img/top/top-secret03.jpg">
+        </div>
+        <div class="top-secret__slider-item">
+          <img src="assets/img/top/top-secret04.jpg">
+        </div>
+        <div class="top-secret__slider-item">
+          <img src="assets/img/top/top-secret05.jpg">
+        </div>
+        <div class="top-secret__slider-item">
+          <img src="assets/img/top/top-secret06.jpg">
+        </div>
+        <div class="top-secret__slider-item">
+          <img src="assets/img/top/top-secret01.jpg">
+        </div>
+        <div class="top-secret__slider-item">
+          <img src="assets/img/top/top-secret02.jpg">
+        </div>
+        <div class="top-secret__slider-item">
+          <img src="assets/img/top/top-secret03.jpg">
+        </div>
+        <div class="top-secret__slider-item">
+          <img src="assets/img/top/top-secret04.jpg">
+        </div>
+        <div class="top-secret__slider-item">
+          <img src="assets/img/top/top-secret05.jpg">
+        </div>
+        <div class="top-secret__slider-item">
+          <img src="assets/img/top/top-secret06.jpg">
+        </div>
+
+      </div>
+      <a href="" class="top-secret__img">
+        <img src="assets/img/top/top-secret-img.png" alt="">
+      </a>
+    </section>
+
+
+    <section class="top-guide">
+      <div class="top-guide__inner">
+        <a href="" class="top-guide__item"><img src="assets/img/top/top-guide-bnr01.png" alt="買い物ガイドを見る"></a>
+        <a href="" class="top-guide__item"><img src="assets/img/top/top-guide-bnr02.png" alt="定期購入について"></a>
+
+      </div>
+    </section>
+
+    <section class="top-recs">
+      <h2 class="top-recs__ttl">おすすめ商品</h2>
+      <div class="top-recs__item-wrap">
+        <div class="item-card">
+          <div class="item-card__img">
+            <img src="assets/img/top/item-card01.jpg" alt="">
+          </div>
+          <h3 class="item-card__ttl">無洗米金太郎きぬむすめ<span class="item-card__ttl-span">（5kg）</span></h3>
+          <p class="item-card__lead">金太郎飴生産米という生産方法で、いつも変わらない品質の安定したきぬむすめです。</p>
+          <div class="item-card__price-wrap">
+            <div class="item-card__price-left">
+              <p class="item-card__price">&yen;4980<span class="item-card__price-tax">税込</span><span  class="item-card__price-span">（5kg）</span></p>
+            </div>
+            <div class="item-card__price-right">
+<input class="item-card__input" type="submit" value="カートに入れる">
+<p>この商品には別重量のものがあります</p>
+            </div>
+            <p class="item-card__bottom-text">この商品には別重量のものがあります</p>
+            <div class="item-card__size-wrap">
+              <a href="" class="item-card__size-item">2kg</a>
+              <a href="" class="item-card__size-item">5kg</a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
 
 
 
-    <section class="top-secret top-secret-js">
-      <div class="top-secret__slider-item">
-        <img src="assets/img/top/top-secret01.png">
-      </div>
-      <div class="top-secret__slider-item">
-        <img src="assets/img/top/top-secret01.png">
-      </div>
-      <div class="top-secret__slider-item">
-        <img src="assets/img/top/top-secret01.png">
-      </div>
-      <div class="top-secret__slider-item">
-        <img src="assets/img/top/top-secret01.png">
-      </div>
-      <div class="top-secret__slider-item">
-        <img src="assets/img/top/top-secret01.png">
-      </div>
-      <div class="top-secret__slider-item">
-        <img src="assets/img/top/top-secret01.png">
-      </div>
-      <div class="top-secret__slider-item">
-        <img src="assets/img/top/top-secret01.png">
-      </div>
-      <div class="top-secret__slider-item">
-        <img src="assets/img/top/top-secret01.png">
-      </div>
-      <div class="top-secret__slider-item">
-        <img src="assets/img/top/top-secret01.png">
-      </div>
-      <div class="top-secret__slider-item">
-        <img src="assets/img/top/top-secret01.png">
-      </div>
     </section>
 
 
 
 
-    <section class="top-about main__section-inner">
-      <div class="top-about__inner">
-        <h2 class="top-about__ttl top-style__ttl">不動産鑑定士協会について</h2>
-        <p class="top-about__text">公益社団法人山口県不動産鑑定士協会は、<br class="pc-block">
-          平成8年8月8日に山口県知事の許可を受けて設立されました。</p>
-        <p class="top-about__text">私達は、土地の適正な利用と管理を通じ、地域社会の発展と国民生活の安定向上を図ることを目的とした土地基本法の理念に基づいて、<br class="pc-block">
-          会員の資質を高く保ち、<br class="pc-block">
-          不動産鑑定評価制度を正しく運用し、<br class="pc-block">
-          不動産が安心・安全な取引となるよう導き、<br class="pc-block">
-          県民の生活がより安定したものとなるように、<br class="pc-block">
-          山口県全体が健全でバランスよく発展していくことを目指して活動しています。</p>
-        <div class="top-about__btn btn-style">
-          <a href="overview.html" class="btn-style__btn">詳しく見る</a>
-        </div>
-        <div class="top-about__text-left-img">
-          <img src="assets/img/top/about-text-left.png" alt="">
-        </div>
-        <div class="top-about__text-right-img">
-          <img src="assets/img/top/about-text-right.png" alt="">
-        </div>
-      </div>
-
-      <div class="top-about__left-bg">
-        <img src="assets/img/top/about-left-bg.png" alt="">
-      </div>
-      <div class="top-about__right-bg">
-        <img src="assets/img/top/about-right-bg.png" alt="">
-      </div>
-    </section>
-
-
-
-    <section class="top-info">
-      <div class="top-info__top-img">
-        <img src="assets/img/top/info-top-img.png" alt="">
-      </div>
-
-      <div class="top-info__inner">
-        <h2 class="top-info__ttl top-style__ttl">お知らせ</h2>
-        <div class="top-info__article-wrap">
-          <article class="top-info__article">
-            <date class="top-info__date">2024.01.01</date>
-            <span class="top-info__cat top-info__cat--sodan">相談</span>
-            <a href="single.html" class="top-info__article-ttl-wrap">
-              <h3 class="top-info__article-ttl">不動産鑑定士による無料相談会</h3>
-              <p class="top-info__article-extract">県民が抱える不動産に関する諸問題の解決に向け、相談会を実施します。</p>
-            </a>
-
-          </article>
-          <article class="top-info__article">
-            <date class="top-info__date">2024.01.01</date>
-            <span class="top-info__cat top-info__cat--kaiin">会員</span>
-            <a href="single.html" class="top-info__article-ttl-wrap">
-              <h3 class="top-info__article-ttl">不動産鑑定士による無料相談会</h3>
-              <p class="top-info__article-extract">県民が抱える不動産に関する諸問題の解決に向け、相談会を実施します。</p>
-            </a>
-
-          </article>
-          <article class="top-info__article">
-            <date class="top-info__date">2024.01.01</date>
-            <span class="top-info__cat">相談</span>
-            <a href="single.html" class="top-info__article-ttl-wrap">
-              <h3 class="top-info__article-ttl">不動産鑑定士による無料相談会</h3>
-              <p class="top-info__article-extract">県民が抱える不動産に関する諸問題の解決に向け、相談会を実施します。</p>
-            </a>
-
-          </article>
-          <article class="top-info__article">
-            <date class="top-info__date">2024.01.01</date>
-            <span class="top-info__cat top-info__cat--koza">講座</span>
-            <a href="single.html" class="top-info__article-ttl-wrap">
-              <h3 class="top-info__article-ttl">不動産鑑定士による無料相談会</h3>
-              <p class="top-info__article-extract">県民が抱える不動産に関する諸問題の解決に向け、相談会を実施します。</p>
-            </a>
-
-          </article>
-        </div>
-
-        <div class="top-info__btn btn-style">
-          <a href="information.html" class="btn-style__btn">一覧で見る</a>
-        </div>
-
-
-      </div>
-    </section>
-
-
-    <section class="top-menu main__section-inner">
-      <div class="top-menu__top-img">
-        <img src="assets/img/top/menu-top-img.png" alt="">
-      </div>
-
-      <div class="top-menu__inner">
-        <div class="top-menu__item">
-          <h3 class="top-menu__ttl top-style__ttl">地価公示・地価調査</h3>
-          <p class="top-menu__item-text">一般の土地取引の基準や目安となるほか、道路や公園等の公共
-            用地の取得価格を算定する際にも活用されています。</p>
-          <div class="top-menu__btn btn-style">
-            <a href="data.html" class="btn-style__btn">詳しく見る</a>
-          </div>
-          <div class="top-menu__item-img"><img src="assets/img/top/menu-item-img04.png" alt="">
-          </div>
-        </div>
-        <div class="top-menu__item">
-          <h3 class="top-menu__ttl top-style__ttl">地価要覧</h3>
-          <p class="top-menu__item-text">県内の原則10名程度以上の団体を対象に、<br class="pc-block">最新の山口県内の地価水準とともに、過去の地価水準の推移も
-            掲載しています。</p>
-          <div class="top-menu__btn btn-style">
-            <a href="directory.html" class="btn-style__btn">詳しく見る</a>
-          </div>
-          <div class="top-menu__item-img"><img src="assets/img/top/menu-item-img05.png" alt="">
-          </div>
-        </div>
-        <div class="top-menu__item">
-          <h3 class="top-menu__ttl top-style__ttl">山口県不動産市況ＤＩ調査</h3>
-          <p class="top-menu__item-text">過去半年の不動産市場の推移に関する実感と、この先半年の不
-            動産市場の動向に関する予測についてのアンケート集計です。</p>
-          <div class="top-menu__btn btn-style">
-            <a href="market.html" class="btn-style__btn">詳しく見る</a>
-          </div>
-          <div class="top-menu__item-img"><img src="assets/img/top/menu-item-img04.png" alt="">
-          </div>
-        </div>
-        <div class="top-menu__item">
-          <h3 class="top-menu__ttl top-style__ttl">会員紹介</h3>
-          <p class="top-menu__item-text">公益社団法人山口県不動産鑑定士協会に所属する不動産鑑定
-            士・不動産鑑定士事務所をご紹介いたします。</p>
-          <div class="top-menu__btn btn-style">
-            <a href="member.html" class="btn-style__btn">詳しく見る</a>
-          </div>
-          <div class="top-menu__item-img"><img src="assets/img/top/menu-item-img06.png" alt="">
-          </div>
-        </div>
-        <div class="top-menu__item">
-          <h3 class="top-menu__ttl top-style__ttl">無料相談会</h3>
-          <p class="top-menu__item-text">暮らしの中のありとあらゆる“困った”にさまざまな角度から
-            お答えします。ご相談は無料です。</p>
-          <div class="top-menu__btn btn-style">
-            <a href="session.html" class="btn-style__btn">詳しく見る</a>
-          </div>
-          <div class="top-menu__item-img"><img src="assets/img/top/menu-item-img03.png" alt="">
-          </div>
-        </div>
-        <div class="top-menu__item">
-          <h3 class="top-menu__ttl top-style__ttl">不動産鑑定無料相談所</h3>
-          <p class="top-menu__item-text">不動産鑑定評価に対する正しい認識と制度の普及を図るため、
-            当協会事務局に「不動産鑑定無料相談所」を開設します。</p>
-          <div class="top-menu__btn btn-style">
-            <a href="advice.html" class="btn-style__btn">詳しく見る</a>
-          </div>
-          <div class="top-menu__item-img"><img src="assets/img/top/menu-item-img03.png" alt="">
-          </div>
-        </div>
-        <div class="top-menu__item">
-          <h3 class="top-menu__ttl top-style__ttl">出前講座</h3>
-          <p class="top-menu__item-text">当協会会員が講師として研修会や職場などにお伺いし、不動産
-            に関する各種テーマについて、無料の講座を実施しています。</p>
-          <div class="top-menu__btn btn-style">
-            <a href="delivery.html" class="btn-style__btn">詳しく見る</a>
-          </div>
-          <div class="top-menu__item-img top-menu__item-img--02"><img src="assets/img/top/menu-item-img02.png" alt="">
-          </div>
-        </div>
-        <div class="top-menu__item">
-          <h3 class="top-menu__ttl top-style__ttl"><span>パンフレット</span>不動産鑑定士やまぐち</h3>
-          <p class="top-menu__item-text">当協会の活動をわかりやすくまとめた案内パンフレットです。<br>
-            ぜひご一読ください。</p>
-          <div class="top-menu__btn btn-style">
-            <a href="pamphlet.html" class="btn-style__btn">詳しく見る</a>
-          </div>
-          <div class="top-menu__item-img"><img src="assets/img/top/menu-item-img01.png" alt="">
-          </div>
-        </div>
-
-
-
-      </div>
-
-      <div class="top-menu__left-bg">
-        <img src="assets/img/top/menu-left-bg.png" alt="">
-      </div>
-      <div class="top-menu__right-bg">
-        <img src="assets/img/top/menu-right-bg.png" alt="">
-      </div>
-    </section>
-
-
-    <section class="bnr-section">
-      <div class="bnr-section__inner">
-        <a href="https://www.fudousan-kanteishi.or.jp/" target="_blank" rel="noopener" class="bnr-section__item"><img
-            src="assets/img/top/bnr-section01.png" alt="日本不動産鑑定士協会連合会"></a>
-        <a href="https://www.fudousan-kanteishi.or.jp/cyoutei/" target="_blank" rel="noopener"
-          class="bnr-section__item"><img src="assets/img/top/bnr-section02.png" alt="不動産鑑定士調停センター"></a>
-
-      </div>
-
-    </section>
 
 
 
@@ -389,7 +299,7 @@
         <a href="#" class="footer__ttl"><span>公益社団法人</span>山口県不動産鑑定士協会</a>
         <div class="footer__address">
           〒754-0021<br>
-          山口市小郡黄金町11-4　富士ハイツ1F
+          山口市小郡黄金町11-4 富士ハイツ1F
         </div>
         <div class="footer__tel-wrap">
           <a href="tel:083-973-1051" class="footer__tel">TEL083-973-1051</a>

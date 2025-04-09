@@ -45,7 +45,7 @@ a {
 
 
 a:hover {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 img {
@@ -65,7 +65,8 @@ table {
   font-size: clamp(0.813rem, 0.79rem + 0.11vw, 0.875rem);
 }
 
-input,textarea {
+input,
+textarea {
   -webkit-appearance: none;
 }
 
@@ -86,19 +87,122 @@ input,textarea {
 }
 
 
+.black-bg {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.6s;
+
+  &.active {
+    visibility: visible;
+    z-index: 10;
+    opacity: 0.6;
+  }
+}
+
+
 
 .main {
-  padding: 70px 0 0;
+  padding: 80px 0 0;
 
-  @include tab {
-    padding: 60px 0 0 0;
+  @include pc {
+    padding: 53px 0 0 0;
+  }
+}
+
+
+// 共通パーツ
+.top-btn {
+  background-color: #f2fbf7;
+  padding: 40px;
+
+  @include pc {
+    padding: 24px;
+
   }
 
-  &__section-inner {
-    max-width: 1280px;
+  &__inner {
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 0 12px;
+    display: flex;
+    gap: 20px;
+    line-height: 1.3;
+
+    @include pc {
+      gap: 12px;
+    }
+
+    @include tab {
+      flex-wrap: wrap;
+    }
   }
+
+  &__item {
+    width: calc((100% - 120px) / 7);
+
+    @include pc {
+      width: calc((100% - 72px) / 7);
+    }
+
+    @include tab {
+      width: calc((100% - 36px) / 4);
+    }
+
+    @include sp {
+      width: calc((100% - 24px) / 3);
+
+    }
+  }
+
+  &__ttl {
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  &__img {
+    margin: 0 0 16px;
+  }
+
+  &__ {}
+}
+
+
+// 商品カード
+.item-card {
+  width: 300px;
+  background-color: #f2fbf7;
+  padding: 20px;
+
+
+  &__img {}
+
+  &__ttl {}
+
+  &__ttl-span {}
+
+  &__lead {}
+
+  &__price-wrap {}
+
+  &__price {}
+
+  &__price-tax {}
+
+  &__price-span {}
+
+  &__price-left {}
+
+
+
+  &__ {}
+
+  &__ {}
 
 }
 
@@ -114,7 +218,7 @@ input,textarea {
 
 
   &__ttl {
-    color: #44a136;
+    color: #177139;
     font-size: 22px;
 
     @include sp {
@@ -135,7 +239,7 @@ input,textarea {
 .page-style {
 
   &__ttl {
-    color: #44a136;
+    color: #177139;
     font-size: 22px;
 
     @include sp {
@@ -162,8 +266,8 @@ input,textarea {
     justify-content: center;
     align-items: center;
     position: relative;
-    background: #44a136;
-    border: 1px solid #44a136;
+    background: #177139;
+    border: 1px solid #177139;
     box-sizing: border-box;
     padding: 0 45px 0 25px;
     color: #fff;
@@ -191,12 +295,12 @@ input,textarea {
 
     &:hover {
       background: #fff;
-      color: #44a136;
+      color: #177139;
     }
 
     &:hover:before {
-      border-top: 2px solid #44a136;
-      border-right: 2px solid #44a136;
+      border-top: 2px solid #177139;
+      border-right: 2px solid #177139;
     }
   }
 
@@ -205,27 +309,27 @@ input,textarea {
 // テーブル
 .table-style {
   width: 100%;
-	border-collapse: collapse;
-  border-bottom: 1px solid #44a136;
+  border-collapse: collapse;
+  border-bottom: 1px solid #177139;
 
 
   th {
-    border-top: 1px solid #44a136;
+    border-top: 1px solid #177139;
     vertical-align: middle;
-    color: #44a136;
+    color: #177139;
     padding: 12px 12px 12px 40px;
     text-align: left;
 
-    @include sp{
+    @include sp {
       padding: 8px 12px 8px 12px;
     }
 
   }
 
   td {
-    border-top: 1px solid #44a136;
-	border-collapse: collapse;
-  padding: 12px 12px 12px 0;
+    border-top: 1px solid #177139;
+    border-collapse: collapse;
+    padding: 12px 12px 12px 0;
 
   }
 }
@@ -233,10 +337,10 @@ input,textarea {
 
 // 両側背景
 .sides-bg {
-position: relative;
+  position: relative;
 
-&:before {
-  content: "";
+  &:before {
+    content: "";
     position: absolute;
     width: 280px;
     top: 50px;
@@ -246,13 +350,13 @@ position: relative;
     background-size: 280px auto;
     z-index: -1;
 
-    @include tab{
-    display: none;
+    @include tab {
+      display: none;
     }
-}
+  }
 
-&:after {
-  content: "";
+  &:after {
+    content: "";
     position: absolute;
     top: 50px;
     width: 280px;
@@ -262,22 +366,22 @@ position: relative;
     background-size: 280px auto;
     z-index: -1;
 
-    @include tab{
+    @include tab {
       display: none;
-      }
-}
+    }
+  }
 }
 
 
 // ページャー
 .pager-archive {
   text-align: center;
-    padding: 0 12px;
+  padding: 0 12px;
 }
 
 .pager-single {
   text-align: center;
-    padding: 0 12px;
+  padding: 0 12px;
 }
 
 
@@ -342,7 +446,7 @@ position: relative;
   h2 {
     font-size: 22px;
     margin: 24px 0 20px;
-    color: #44a136;
+    color: #177139;
     font-weight: bold;
 
     @include sp {
