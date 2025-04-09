@@ -94,12 +94,14 @@ $(function () {
     arrows: true,
     centerMode: true,
     centerPadding: "25%",
-    // dotsClass: "main-visual__slider-dots",
+    dotsClass: 'dots-wrap',
 
     responsive: [{
       breakpoint: 750,
       settings: {
         centerMode: false,
+        arrows: false, // 矢印非表示
+
       }
     }]
   })
@@ -135,6 +137,8 @@ $(function () {
     slidesToShow: 3,
     variableWidth: true,
     dots: true,
+    dotsClass: 'dots-wrap',
+
 
     responsive: [{
         breakpoint: 800,
@@ -149,6 +153,8 @@ $(function () {
         settings: {
           centerPadding: "2%",
           slidesToShow: 1,
+          arrows: false, // 矢印非表示
+
         }
       },
     ],

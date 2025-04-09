@@ -472,6 +472,37 @@ textarea {
   }
 }
 
+/* slickドット */
+.dots-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 12px 0 0;
+}
+
+.dots-wrap li {
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  background: #def6e7;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dots-wrap li:hover,
+.dots-wrap li.slick-active {
+  background: #177139;
+}
+.dots-wrap li button {
+  display: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
 // トップページ共通
 
 .top-style {
