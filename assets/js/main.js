@@ -3,7 +3,7 @@ $(function () {
   $("#js-hamburger-menu, .navigation__link").click(function () {
     $(".header-sp,.black-bg,.header").toggleClass("active"); //ボタン自身に activeクラスを付与し
   });
-  $(".header-sp").click(function () {
+  $(".header-sp__btn-img").click(function () {
     $(".header-sp,.black-bg,.header").toggleClass("active");
     $('.hamburger-menu').toggleClass('hamburger-menu--open');
   });
@@ -17,41 +17,99 @@ $(function () {
   });
 
 
-
-
-  // ヘッダー隠れる動き
-
-  // let startPos = 0;
-  // let winScrollTop = 0;
-  // const Header = $('.header');
-  // $(window).on('scroll', function () {
-  //   winScrollTop = $(this).scrollTop();
-  //   if (winScrollTop >= startPos && winScrollTop > 100) { // ここにコードを追加
-  //     $(Header).addClass('is-hide');
-  //   } else {
-  //     $(Header).removeClass('is-hide');
-  //   }
-  //   startPos = winScrollTop;
-  // });
-
-
-  $(".top-to-js").click(function () {
-    $("body,html").animate({
-        scrollTop: 0 //ページトップまでスクロール
-      },
-      500
-    ); //ページトップスクロールの速さ。
-    return false; //親要素へのイベント伝播を止める
-  });
-
-
-  // ハンバーガーメニュー
+// TOPへボタン
   $(function () {
-    $('#js-hamburger-menu, .navigation__link').on('click', function () {
-      $('.navigation').slideToggle(500)
-      $('.hamburger-menu').toggleClass('hamburger-menu--open')
+    var $topButton = $(".top-to-js");
+    var $footer = $("footer"); // フッター要素を取得
+  
+    // トップへスクロール
+    $topButton.click(function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      $("html, body").animate({ scrollTop: 0 }, 500);
+    });
+  
+    // スクロール時の処理
+    $(window).scroll(function () {
+      var scrollTop = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      var footerTop = $footer.offset().top;
+  
+      // フッターに達したかどうか
+      if (scrollTop + windowHeight >= footerTop) {
+        $topButton.fadeOut();
+      } else {
+        $topButton.fadeIn();
+      }
     });
   });
+
+
+  // おすすめボタン
+  $(function () {
+    var $topButton = $(".top-btn");
+    var $osusumeButton = $(".osusume-js");
+    var $footer = $("footer");
+  
+    // 最初は top ボタン非表示（ただし初回チェックで制御される）
+    $topButton.hide();
+  
+    // おすすめボタンをクリックしたら top ボタンを表示
+    $osusumeButton.click(function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      $topButton.css("display", "block");
+    });
+  
+    // top ボタンのバツをクリックしたら top ボタンを非表示（イベント委任）
+    $(document).on("click", ".top-btn__batsu", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      // 画面幅 820px 未満のときだけ非表示にする
+      if ($(window).width() < 820) {
+        $topButton.css("display", "none");
+      }
+    });
+  
+    // スクロール時にフッター到達チェック
+    $(window).scroll(function () {
+      var scrollTop = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      var footerTop = $footer.offset().top;
+  
+      if (scrollTop + windowHeight >= footerTop) {
+        $osusumeButton.fadeOut();
+      } else {
+        if ($(window).width() < 820) {
+          $osusumeButton.fadeIn();
+        }
+      }
+    });
+  
+    // 画面サイズによる表示切り替え
+    function checkWindowSize() {
+      if ($(window).width() >= 820) {
+        // 820px 以上なら
+        $osusumeButton.hide();
+        $topButton.show(); // 常に表示
+      } else {
+        // 820px 未満なら
+        $topButton.hide(); // 初期は非表示（クリックで表示）
+        $osusumeButton.show();
+      }
+    }
+  
+    // 読み込み時にもチェック
+    checkWindowSize();
+  
+    // リサイズ時にもチェック
+    $(window).resize(function () {
+      checkWindowSize();
+    });
+  });
+  
+  
+
 
 
   // サーチボタン・アカウントボタン

@@ -109,22 +109,49 @@ textarea {
 
 
 .main {
-  padding: 80px 0 0;
+  margin: 80px 0 0;
 
   @include pc {
-    padding: 53px 0 0 0;
+    margin: 53px 0 0 0;
   }
 }
 
+.subpage {
 
-// 共通パーツ
+  &__ttl {
+    font-size: 32px;
+
+    @include tab{
+    font-size: 20px;
+    }
+  }
+
+  &__item-wrap {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+}
+
+
+// ページトップのおすすめ商品
 .top-btn {
   background-color: #f2fbf7;
   padding: 40px;
 
   @include pc {
     padding: 24px;
+  }
 
+  @include tab {
+    padding: 60px 24px 0;
+
+    display: none;
+    position: fixed;
+    z-index: 10;
+    height: 100vh;
   }
 
   &__inner {
@@ -158,6 +185,21 @@ textarea {
       width: calc((100% - 24px) / 3);
 
     }
+
+    &.active {
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 60px;
+        height: 4px;
+        display: inline-block;
+        background-color: #177139;
+        position: absolute;
+        bottom: -10px;
+        left: calc(50% - 30px);
+      }
+    }
   }
 
   &__ttl {
@@ -169,11 +211,13 @@ textarea {
     margin: 0 0 16px;
   }
 
-  &__ {}
+  &__batsu {
+    position: absolute;
+    top: 0;
+    right: 17px;
+    font-size: 30px;
+  }
 }
-
-
-
 
 // 商品カード
 
@@ -210,7 +254,7 @@ textarea {
     display: block;
 
 
-    
+
     &:before {
       position: absolute;
       top: -30px;
@@ -246,11 +290,11 @@ textarea {
 
     &:after {
       position: absolute;
-      bottom: -28px;
+      bottom: -34px;
       right: 0px;
-      transform: scale(0.6);
+      transform: scale(0.4);
       z-index: 10;
-      content: url(../img/top/main-visual-arrow_next.png);
+      content: url(../img/top/item-arrow.png);
 
     }
 
@@ -400,6 +444,18 @@ textarea {
   }
 }
 
+// パンくずリスト
+.breadcrumbs-wrap {
+
+
+  &__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6px 12px 0;
+    font-size: 12px;
+  }
+}
+
 
 // ボタン
 .arrow-button {
@@ -438,11 +494,11 @@ textarea {
       font-size: 12px;
       padding: 0 0 0 6px;
 
-      @include tab{
-      display: block;
-      margin: 0 auto;
-      text-align: center;
-      
+      @include tab {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+
       }
     }
   }
@@ -492,6 +548,7 @@ textarea {
 .dots-wrap li.slick-active {
   background: #177139;
 }
+
 .dots-wrap li button {
   display: none;
   -webkit-appearance: none;
@@ -503,213 +560,12 @@ textarea {
   background-color: transparent;
 }
 
-// トップページ共通
-
-.top-style {
-
-  &__section {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 12px;
-  }
 
 
-  &__ttl {
-    color: #177139;
-    font-size: 22px;
-
-    @include sp {
-      font-size: 20px;
-      text-align: center;
-    }
-
-    span {
-      font-size: 60%;
-      vertical-align: middle;
-    }
-
-  }
-}
-
-// 下層ページ共通
-
-.page-style {
-
-  &__ttl {
-    color: #177139;
-    font-size: 22px;
-
-    @include sp {
-      font-size: 20px;
-      text-align: center;
-    }
-
-    span {
-      font-size: 80%;
-      vertical-align: middle;
-    }
-  }
-}
-
-// ボタン
-
-.btn-style {
-  width: 320px;
-  margin: 0 auto;
-
-  &__btn {
-    display: flex;
-    height: 46px;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background: #177139;
-    border: 1px solid #177139;
-    box-sizing: border-box;
-    padding: 0 45px 0 25px;
-    color: #fff;
-    font-size: 14px;
-    letter-spacing: 0.1em;
-    line-height: 1.3;
-    text-align: left;
-    text-decoration: none;
-    transition-duration: 0.3s;
-    border-radius: 50px;
-
-    &:before {
-      content: '';
-      width: 8px;
-      height: 8px;
-      border: 0;
-      border-top: 2px solid #fff;
-      border-right: 2px solid #fff;
-      transform: rotate(45deg);
-      position: absolute;
-      top: 50%;
-      right: 25px;
-      margin-top: -6px;
-    }
-
-    &:hover {
-      background: #fff;
-      color: #177139;
-    }
-
-    &:hover:before {
-      border-top: 2px solid #177139;
-      border-right: 2px solid #177139;
-    }
-  }
-
-}
-
-// テーブル
-.table-style {
-  width: 100%;
-  border-collapse: collapse;
-  border-bottom: 1px solid #177139;
 
 
-  th {
-    border-top: 1px solid #177139;
-    vertical-align: middle;
-    color: #177139;
-    padding: 12px 12px 12px 40px;
-    text-align: left;
-
-    @include sp {
-      padding: 8px 12px 8px 12px;
-    }
-
-  }
-
-  td {
-    border-top: 1px solid #177139;
-    border-collapse: collapse;
-    padding: 12px 12px 12px 0;
-
-  }
-}
 
 
-// 両側背景
-.sides-bg {
-  position: relative;
-
-  &:before {
-    content: "";
-    position: absolute;
-    width: 280px;
-    top: 50px;
-    height: 100%;
-    left: 20px;
-    background: url(../img/subpage/sides-bg-left.png) repeat-y left top;
-    background-size: 280px auto;
-    z-index: -1;
-
-    @include tab {
-      display: none;
-    }
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    top: 50px;
-    width: 280px;
-    height: 100%;
-    right: 20px;
-    background: url(../img/subpage/sides-bg-right.png) repeat-y left top;
-    background-size: 280px auto;
-    z-index: -1;
-
-    @include tab {
-      display: none;
-    }
-  }
-}
-
-
-// ページャー
-.pager-archive {
-  text-align: center;
-  padding: 0 12px;
-}
-
-.pager-single {
-  text-align: center;
-  padding: 0 12px;
-}
-
-
-// Slick設定
-
-.slick-prev:before {
-  background: url(../img/top/slick-arrow_l.png) !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  font-size: 40px;
-  opacity: 1 !important;
-  color: transparent;
-
-}
-
-.slick-next:before {
-  background: url(../img/top/slick-arrow_r.png) !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  font-size: 40px;
-  opacity: 1 !important;
-  color: transparent;
-
-}
-
-
-.slick-dots li.slick-active button:before {
-  color: #1b1464 !important;
-  opacity: 1 !important;
-
-}
 
 // エディター設定
 

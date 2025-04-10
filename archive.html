@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="email=no,telephone=no,address=no">
   <!--!!!!!!!!!!!!!!!!!WPでは不要!!!!!!!!!!!!!!!!!!!!!-->
-  <title>みずほ屋</title>
+  <title>商品一覧</title>
   <meta name="description" content="<?php echo $des; ?>">
   <!--!!!!!!!!!!!!!!!!!公開時、allに変更する!!!!!!!!!!!!!!!!!!!!!-->
   <meta name="robots" content="none">
@@ -48,7 +48,7 @@
       </h1>
       <nav class="header__menu-wrap header__item">
         <div class="header__menu-inner">
-          <a href="" class="header__menu">取り扱い商品</a>
+          <a href="" class="header__menu active">取扱商品</a>
           <a href="" class="header__menu">買い物ガイド</a>
           <a href="" class="header__menu">よくある質問</a>
           <a href="" class="header__menu">問い合わせ</a>
@@ -122,11 +122,11 @@
     </div>
   </header>
 
-  <div class="main page-top">
+  <div class="main archive">
 
     <section class="top-btn">
       <div class="top-btn__inner">
-        <a href="" class="top-btn__item">
+        <a href="" class="top-btn__item active">
           <div class="top-btn__img">
             <img src="assets/img/top/top-btn01.png" alt="おすすめ商品">
           </div>
@@ -172,86 +172,19 @@
       </div>
       <p class="top-btn__batsu sp-block">×</p>
     </section>
-
-    <section class="main-visual">
-      <div class="main-visual__slider-wrap">
-        <div class="main-visual__slider main-visual-js">
-          <a href="" class="main-visual__slider-item">
-            <img src="assets/img/top/top-slider01.jpg">
-          </a>
-          <a href="" class="main-visual__slider-item">
-            <img src="assets/img/top/top-slider02.jpg">
-          </a>
-          <a href="" class="main-visual__slider-item">
-            <img src="assets/img/top/top-slider03.jpg">
-          </a>
-          <a href="" class="main-visual__slider-item">
-            <img src="assets/img/top/top-slider04.jpg">
-          </a>
-        </div>
+    <div class="breadcrumbs-wrap">
+      <div class="breadcrumbs-wrap__content">HOME ／ ○○○○ ／ ○○○○</div>
+    </div>
+    <section class="archive__section">
+      <div class="archive__ttl-wrap">
+        <h1 class="archive__ttl subpage__ttl">おすすめ商品</h1>
+        <select class="archive__select">
+          <option value="" class="archive__select-item">並べ替え：おすすめ</option>
+          <option value="" class="archive__select-item">並べ替え：限定商品</option>
+          <option value="" class="archive__select-item">並べ替え：限定価格</option>
+        </select>
       </div>
-    </section>
-
-    <section class="top-secret">
-      <div class="top-secret__wnner  top-secret-js">
-        <div class="top-secret__slider-item">
-          <img src="assets/img/top/top-secret01.jpg">
-        </div>
-        <div class="top-secret__slider-item">
-          <img src="assets/img/top/top-secret02.jpg">
-        </div>
-        <div class="top-secret__slider-item">
-          <img src="assets/img/top/top-secret03.jpg">
-        </div>
-        <div class="top-secret__slider-item">
-          <img src="assets/img/top/top-secret04.jpg">
-        </div>
-        <div class="top-secret__slider-item">
-          <img src="assets/img/top/top-secret05.jpg">
-        </div>
-        <div class="top-secret__slider-item">
-          <img src="assets/img/top/top-secret06.jpg">
-        </div>
-        <div class="top-secret__slider-item">
-          <img src="assets/img/top/top-secret01.jpg">
-        </div>
-        <div class="top-secret__slider-item">
-          <img src="assets/img/top/top-secret02.jpg">
-        </div>
-        <div class="top-secret__slider-item">
-          <img src="assets/img/top/top-secret03.jpg">
-        </div>
-        <div class="top-secret__slider-item">
-          <img src="assets/img/top/top-secret04.jpg">
-        </div>
-        <div class="top-secret__slider-item">
-          <img src="assets/img/top/top-secret05.jpg">
-        </div>
-        <div class="top-secret__slider-item">
-          <img src="assets/img/top/top-secret06.jpg">
-        </div>
-
-      </div>
-      <a href="" class="top-secret__img">
-        <img src="assets/img/top/top-secret-img.png" alt="">
-      </a>
-    </section>
-
-
-    <section class="top-guide">
-      <div class="top-guide__inner">
-        <a href="" class="top-guide__item"><img src="assets/img/top/top-guide-bnr01.png" alt="買い物ガイドを見る"></a>
-        <a href="" class="top-guide__item"><img src="assets/img/top/top-guide-bnr02.png" alt="定期購入について"></a>
-
-      </div>
-    </section>
-
-    <section class="top-recs">
-      <div class="top-recs__ttl-wrap top-ttl">
-        <h2 class="top-recs__ttl top-ttl__item">おすすめ商品</h2>
-      </div>
-
-      <div class="top-recs__card-wrap top-recs-js">
+      <div class="archive__card-wrap">
         <div class="top-recs__card item-card item-card--rice">
           <div class="item-card__img-wrap">
             <a href="" class="item-card__img item-card__img--tokubetsu">
@@ -384,82 +317,80 @@
             </div>
           </div>
         </div>
+        <div class="top-recs__card item-card item-card--rice">
+          <div class="item-card__img-wrap">
+            <a href="" class="item-card__img item-card__img--tokubetsu">
+              <img src="assets/img/top/item-card01.jpg" alt="">
+            </a>
+          </div>
+          <h3 class="item-card__ttl">無洗米金太郎きぬむすめ<span class="item-card__ttl-span">（5kg）</span></h3>
+          <p class="item-card__lead">金太郎飴生産米という生産方法で、いつも変わらない品質の安定したきぬむすめです。</p>
+          <div class="item-card__price-wrap">
+            <div class="item-card__price-left">
+              <p class="item-card__price">&yen;4,980<span class="item-card__price-tax">税込</span><span
+                  class="item-card__price-span">（5kg）</span></p>
+            </div>
+            <div class="item-card__price-right">
+              <input class="item-card__input" type="submit" value="カートに入れる">
+              <p class="item-card__price-text">数量はカートで調整できます</p>
+            </div>
+          </div>
+          <p class="item-card__bottom-text">この商品には別重量のものがあります</p>
+          <div class="item-card__size-wrap">
+            <a href="" class="item-card__size-item">2kg</a>
+            <a href="" class="item-card__size-item">5kg</a>
+          </div>
+        </div>
+        <div class="top-recs__card item-card item-card--other">
+          <div class="item-card__img-wrap">
+            <a href="" class="item-card__img item-card__img--gentei">
+              <img src="assets/img/top/item-card02.jpg" alt="">
+            </a>
+          </div>
+          <h3 class="item-card__ttl">カニ爪( 家庭用)<span class="item-card__ttl-span">（1kg）</span></h3>
+          <p class="item-card__lead">お徳用カニ爪をどっさり1kg 分お届けします。<br>
+            食べやすいように殻に切れ目が入っています。</p>
+          <div class="item-card__price-wrap">
+            <div class="item-card__price-left">
+              <p class="item-card__price">&yen;5,900<span class="item-card__price-tax">税込</span><span
+                  class="item-card__price-span">（1kg）</span></p>
+            </div>
+            <div class="item-card__price-right">
+              <input class="item-card__input" type="submit" value="カートに入れる">
+              <p class="item-card__price-text">数量はカートで調整できます</p>
+            </div>
+          </div>
+        </div>
+        <div class="top-recs__card item-card item-card--rice">
+          <div class="item-card__img-wrap">
+            <a href="" class="item-card__img item-card__img--gensen">
+              <img src="assets/img/top/item-card01.jpg" alt="">
+            </a>
+          </div>
+          <h3 class="item-card__ttl">無洗米金太郎きぬむすめ<span class="item-card__ttl-span">（5kg）</span></h3>
+          <p class="item-card__lead">金太郎飴生産米という生産方法で、いつも変わらない品質の安定したきぬむすめです。</p>
+          <div class="item-card__price-wrap">
+            <div class="item-card__price-left">
+              <p class="item-card__price">&yen;4,980<span class="item-card__price-tax">税込</span><span
+                  class="item-card__price-span">（5kg）</span></p>
+            </div>
+            <div class="item-card__price-right">
+              <input class="item-card__input" type="submit" value="カートに入れる">
+              <p class="item-card__price-text">数量はカートで調整できます</p>
+            </div>
+          </div>
+          <p class="item-card__bottom-text">この商品には別重量のものがあります</p>
+          <div class="item-card__size-wrap">
+            <a href="" class="item-card__size-item">2kg</a>
+            <a href="" class="item-card__size-item">5kg</a>
+          </div>
+        </div>
       </div>
-      <div class="top-recs__btn">
-        <a href="" class="arrow-button">おすすめ商品をもっと見る</a>
-      </div>
-    </section>
 
-    <section class="top-handling">
-      <div class="top-handling__ttl-wrap top-ttl">
-        <h2 class="top-handling__ttl top-ttl__item">取り扱い商品</h2>
+      <div class="archive__pager">
+      ページャー
       </div>
-      <div class="top-handling__inner">
-        <div class="top-handling__item">
-          <div class="top-handling__img">
-            <img src="assets/img/top/top-btn02.png" alt="お米">
-          </div>
-          <h3 class="top-handling__item-ttl">お米</h3>
-          <p class="top-handling__text">真っ白の炊き立てごはんは、それだけでごちそうですよね。大自然に囲まれた西の京山口で獲れた自慢の山口県産米を是非一度ご賞味ください。</p>
-          <div class="top-handling__btn">
-            <a href="" class="arrow-button arrow-button--handling">お米<span>の商品一覧</span></a>
-          </div>
-        </div>
-        <div class="top-handling__item">
-          <div class="top-handling__img">
-            <img src="assets/img/top/top-btn03.png" alt="厳選の食材や調味料">
-          </div>
-          <h3 class="top-handling__item-ttl">厳選の食材や調味料</h3>
-          <p class="top-handling__text">みずほがおすすめする厳選の食材や調味料です。みずほ特製手造り味噌をはじめとした、普段の食卓からおもてなしの席まで幅広くよろこばれる逸品を揃えました。</p>
-          <div class="top-handling__btn">
-            <a href="" class="arrow-button arrow-button--handling">厳選の食材や調味料<span>の商品一覧</span></a>
-          </div>
-        </div>
-        <div class="top-handling__item">
-          <div class="top-handling__img">
-            <img src="assets/img/top/top-btn04.png" alt="オリジナルセット">
-          </div>
-          <h3 class="top-handling__item-ttl">オリジナルセット</h3>
-          <p class="top-handling__text">珍しいものを食べたい。バリエーション豊かに食べ比べをしたい。期間限定の逸品を手に入れたい。そんな想いをみずほがシチュエーションごとにまとめてセットにしました。
-          </p>
-          <div class="top-handling__btn">
-            <a href="" class="arrow-button arrow-button--handling">オリジナルセット<span>の商品一覧</span></a>
-          </div>
-        </div>
-        <div class="top-handling__item">
-          <div class="top-handling__img">
-            <img src="assets/img/top/top-btn05.png" alt="ギフト">
-          </div>
-          <h3 class="top-handling__item-ttl">ギフト</h3>
-          <p class="top-handling__text">お中元やお歳暮、お祝いやプレゼントに。<br>
-            みずほのギフトは、食卓を明るく受け取った方みんなが笑顔になる逸品を取り揃えています。</p>
-          <div class="top-handling__btn">
-            <a href="" class="arrow-button arrow-button--handling">ギフト<span>の商品一覧</span></a>
-          </div>
-        </div>
-        <div class="top-handling__item">
-          <div class="top-handling__img">
-            <img src="assets/img/top/top-btn06.png" alt="季節商品">
-          </div>
-          <h3 class="top-handling__item-ttl">季節商品</h3>
-          <p class="top-handling__text">旬のものはやっぱり美味しい。<br>
-            季節を眺めて、季節を食べて。</p>
-          <div class="top-handling__btn">
-            <a href="" class="arrow-button arrow-button--handling">季節商品<span>の商品一覧</span></a>
-          </div>
-        </div>
-        <div class="top-handling__item">
-          <div class="top-handling__img">
-            <img src="assets/img/top/top-btn07.png" alt="関連商品">
-          </div>
-          <h3 class="top-handling__item-ttl">関連商品</h3>
-          <p class="top-handling__text">ごはんをより美味しくする<br>
-            使い勝手のよい商品です。</p>
-          <div class="top-handling__btn">
-            <a href="" class="arrow-button arrow-button--handling">関連商品<span>の商品一覧</span></a>
-          </div>
-        </div>
-      </div>
+
     </section>
   </div>
   <!--main end-->
