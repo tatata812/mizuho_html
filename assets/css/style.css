@@ -165,7 +165,7 @@ textarea {
   display: inline-block;
   background-color: #177139;
   position: absolute;
-  bottom: -10px;
+  bottom: 2px;
   left: calc(50% - 30px);
 }
 .top-btn__ttl {
@@ -192,10 +192,10 @@ textarea {
     padding: 12px;
   }
 }
-.item-card--rice {
+.item-card.rice {
   background-color: #f2fbf7;
 }
-.item-card--other {
+.item-card.other {
   background-color: #fce8d2;
 }
 .item-card__img-wrap {
@@ -569,8 +569,178 @@ textarea {
   text-align: center;
 }
 /* =================================
-
+商品詳細
  ================================= */
+.single__ttl-wrap {
+  max-width: 1160px;
+  margin: 24px auto -12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.single__ttl-img {
+  width: 90px;
+}
+.single-item {
+  background-color: #f2fbf7;
+  padding: 60px;
+  max-width: 1240px;
+  margin: 0 auto;
+  border-radius: 24px;
+}
+.single-item__inner {
+  display: flex;
+}
+.single-item__img-wrap {
+  position: relative;
+  z-index: 0;
+  margin: 0 0 12px;
+}
+.single-item__img {
+  border: #fff 12px solid;
+  border-radius: 20px;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+}
+.single-item__img:before {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  transform: scale(0.4);
+  z-index: 10;
+}
+.single-item__img.tokubetsu::before {
+  content: url(../img/top/sticker-tokubetsu.png);
+}
+.single-item__img.gentei::before {
+  content: url(../img/top/sticker-gentei.png);
+}
+.single-item__img.gensen::before {
+  content: url(../img/top/sticker-gensen.png);
+}
+.single-item__img.kikan::before {
+  content: url(../img/top/sticker-kikan.png);
+}
+.single-item__img:after {
+  position: absolute;
+  bottom: -34px;
+  right: 0px;
+  transform: scale(0.4);
+  z-index: 10;
+  content: url(../img/top/item-arrow.png);
+}
+.single-item__img img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.single-item__img img:before {
+  content: "";
+  padding-top: 100%;
+  display: block;
+}
+.single-item__img img.current {
+  border: #848484 1px solid;
+}
+.single-item__img img.current img {
+  opacity: 1;
+}
+.single-item__ttl {
+  padding: 0 4px;
+  margin: 0 0 12px;
+}
+.single-item__ttl-span {
+  display: block;
+}
+.single-item__lead {
+  padding: 0 4px;
+  margin: 0 0 12px;
+  font-size: 12px;
+}
+.single-item__price-wrap {
+  border-top: 1px solid #bbbbbb;
+  border-bottom: 1px solid #bbbbbb;
+  padding: 8px 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0 0 12px;
+}
+.single-item__price {
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.single-item__price-tax {
+  font-size: 12px;
+  font-weight: normal;
+  padding: 0 0 0 6px;
+}
+.single-item__price-span {
+  font-size: 12px;
+  font-weight: normal;
+}
+.single-item__price-right {
+  text-align: center;
+}
+.single-item__input {
+  border: none;
+  background-color: #f79f4d;
+  padding: 8px 8px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0 0 4px;
+  cursor: pointer;
+}
+.single-item__input:hover {
+  background-color: #ffddbc;
+}
+.single-item__price-text {
+  font-size: 11px;
+  white-space: nowrap;
+}
+.single-item__bottom-text {
+  font-size: 11px;
+  white-space: nowrap;
+  padding: 0 4px;
+  margin: 0 0 8px;
+}
+.single-item__size-wrap {
+  display: flex;
+  gap: 8px;
+  padding: 0 4px;
+  flex-wrap: wrap;
+}
+.single-item__size-item {
+  border: #177139 2px solid;
+  border-radius: 20px;
+  width: 80px;
+  padding: 0 8px;
+  position: relative;
+}
+.single-item__size-item:after {
+  /* 擬似要素で矢印アイコンをつくる */
+  content: "";
+  border: 0;
+  border-top: solid 2px #177139;
+  border-right: solid 2px #177139;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  /* 矢印アイコンの位置を設定 */
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%) rotate(45deg);
+  /* rotate(45deg)で矢印を回転（向きを変更）させる */
+  transition: all 0.5s;
+}
+.single-item__size-item:hover:after {
+  right: 3px;
+}
 /* =================================
 
  ================================= */

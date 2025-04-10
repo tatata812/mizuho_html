@@ -196,7 +196,7 @@ textarea {
         display: inline-block;
         background-color: #177139;
         position: absolute;
-        bottom: -10px;
+        bottom: 2px;
         left: calc(50% - 30px);
       }
     }
@@ -232,11 +232,11 @@ textarea {
   }
 
 
-  &--rice {
+  &.rice {
     background-color: #f2fbf7;
   }
 
-  &--other {
+  &.other {
     background-color: #fce8d2;
   }
 
