@@ -110,6 +110,7 @@
  ================================= */
 
 .single {
+  padding: 0 12px;
 
   &__ttl-wrap {
     max-width: 1160px;
@@ -121,6 +122,10 @@
 
   &__ttl-img {
     width: 90px;
+
+    @include sp{
+    width: 60px;
+    }
   }
 
   &__ttl {}
@@ -164,9 +169,23 @@
   margin: 0 auto;
   border-radius: 24px;
 
+  @include pc{
+    padding: 60px 24px;
+  }
+
+  @include sp{
+    padding: 40px 12px;
+    border-radius: 8px;
+
+  }
+
   &__inner {
     display: flex;
     gap: 40px;
+
+    @include tab{
+    flex-direction: column;
+    }
   }
 
   &__left {
@@ -175,6 +194,10 @@
 
   &__right {
     width: 400px;
+
+    @include tab{
+    width: 100%;
+    }
   }
 
   &__ {}
@@ -184,9 +207,14 @@
     z-index: 0;
     margin: 0 0 12px;
 
+    @include sp{
+      margin: 0 ;
+
+    }
+
     &:before {
       position: absolute;
-      top: -30px;
+      top: -40px;
       left: -30px;
       transform: scale(0.6);
       z-index: 10;
@@ -224,6 +252,11 @@
     overflow: hidden;
     display: block;
 
+    @include sp{
+      border-radius: 8px;
+      border: #fff 8px solid;
+    }
+
 
 
 
@@ -253,6 +286,10 @@
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
+
+    @include sp{
+    gap: 8px;
+    }
   }
 
 
@@ -263,6 +300,11 @@
     overflow: hidden;
     border: #fff 8px solid;
     border-radius: 4px;
+
+    @include sp{
+      border-radius: 4px;
+      border: #fff 4px solid;
+    }
 
 
 
@@ -298,6 +340,11 @@
     display: flex;
     gap: 8px;
     margin: 0 0 40px;
+
+    @include sp{
+      margin: 0 0 12px;
+
+    }
   }
 
   &__cat {
@@ -306,6 +353,8 @@
     color: #fff;
     font-size: 13px;
     padding: 2px 0 0 0;
+
+
 
     &.cat01 {
       background-color: #ff9933;
@@ -321,7 +370,12 @@
 
   &__ttl { 
     font-size: 32px;
-    margin: 0 0 28px;
+    margin: 0 0 20px;
+    line-height: 1.4;
+
+    @include sp{
+    font-size: 20px;
+    }
   }
 
   &__ttl-span {
@@ -330,7 +384,7 @@
 
   &__lead {
     padding: 0 4px;
-    margin: 0 0 28px;
+    margin: 0 0 16px;
     font-size: 14px;
   }
 
@@ -352,6 +406,10 @@
     font-size: 26px;
     font-weight: bold;
     white-space: nowrap;
+    
+    @include sp{
+    font-size: 20px;
+    }
   }
 
   &__price-tax {
@@ -427,7 +485,11 @@
     gap: 8px;
     padding: 0 4px;
     flex-wrap: wrap;
-    margin: 0 0 24px;
+    margin: 0 0 66px;
+
+    @include sp{
+    margin: 0 0 32px;
+    }
 
   }
 
@@ -472,15 +534,40 @@
 
   &__description-wrap {
     background-color: #fff;
+    padding: 16px;
+    border-radius: 4px;
+    margin: 0 0 32px;
   }
 
-  &__description-ttl {}
+  &__description-ttl {
+    font-size: 24px;
+    margin: 0 0 16px;
 
-  &__description-lead {}
+    font-size: 20px;
+  }
+
+  &__description-lead {
+    border-bottom: #bbbbbb 1px solid;
+    display: inline-block;
+    padding: 0 0 8px;
+    margin: 0 0 8px;
+
+
+  }
 
   &__description-text {}
 
-  &__ {}
+  &__detail-wrap {
+
+    border-left: #bbbbbb 1px solid;
+    padding: 0 0 0 18px;
+
+    th {
+      width: 80px;
+      text-align: left;
+      font-weight: normal;
+    }
+  }
 
   &__ {}
 
