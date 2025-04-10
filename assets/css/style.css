@@ -754,7 +754,7 @@ textarea {
 }
 .single-item__souryou-text {
   text-align: right;
-  margin: 0 0 24px;
+  margin: 0 0 19px;
 }
 .single-item__souryou-link {
   color: #ff3333;
@@ -783,6 +783,7 @@ textarea {
   gap: 8px;
   padding: 0 4px;
   flex-wrap: wrap;
+  margin: 0 0 24px;
 }
 .single-item__size-item {
   border: #177139 2px solid;
@@ -814,6 +815,9 @@ textarea {
 }
 .single-item__size-item:hover:after {
   right: 3px;
+}
+.single-item__description-wrap {
+  background-color: #fff;
 }
 /* =================================
 
