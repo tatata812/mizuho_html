@@ -203,39 +203,39 @@ textarea {
   z-index: 0;
   margin: 0 0 12px;
 }
-.item-card__img {
-  border: #fff 12px solid;
-  border-radius: 20px;
-  width: 100%;
-  overflow: hidden;
-  display: block;
-}
-.item-card__img:before {
+.item-card__img-wrap:before {
   position: absolute;
   top: -30px;
   left: -30px;
   transform: scale(0.4);
   z-index: 10;
 }
-.item-card__img.tokubetsu::before {
+.item-card__img-wrap.tokubetsu::before {
   content: url(../img/top/sticker-tokubetsu.png);
 }
-.item-card__img.gentei::before {
+.item-card__img-wrap.gentei::before {
   content: url(../img/top/sticker-gentei.png);
 }
-.item-card__img.gensen::before {
+.item-card__img-wrap.gensen::before {
   content: url(../img/top/sticker-gensen.png);
 }
-.item-card__img.kikan::before {
+.item-card__img-wrap.kikan::before {
   content: url(../img/top/sticker-kikan.png);
 }
-.item-card__img:after {
+.item-card__img-wrap:after {
   position: absolute;
   bottom: -34px;
   right: 0px;
   transform: scale(0.4);
   z-index: 10;
   content: url(../img/top/item-arrow.png);
+}
+.item-card__img {
+  border: #fff 12px solid;
+  border-radius: 20px;
+  width: 100%;
+  overflow: hidden;
+  display: block;
 }
 .item-card__img img {
   width: 100%;
@@ -294,7 +294,7 @@ textarea {
 }
 .item-card__input {
   border: none;
-  background-color: #f79f4d;
+  background-color: #ff9933;
   padding: 8px 8px;
   border-radius: 20px;
   font-size: 12px;
@@ -583,18 +583,44 @@ textarea {
 }
 .single-item {
   background-color: #f2fbf7;
-  padding: 60px;
+  padding: 60px 160px;
   max-width: 1240px;
   margin: 0 auto;
   border-radius: 24px;
 }
 .single-item__inner {
   display: flex;
+  gap: 40px;
+}
+.single-item__left {
+  flex: 1;
+}
+.single-item__right {
+  width: 400px;
 }
 .single-item__img-wrap {
   position: relative;
   z-index: 0;
   margin: 0 0 12px;
+}
+.single-item__img-wrap:before {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  transform: scale(0.6);
+  z-index: 10;
+}
+.single-item__img-wrap.tokubetsu::before {
+  content: url(../img/top/sticker-tokubetsu.png);
+}
+.single-item__img-wrap.gentei::before {
+  content: url(../img/top/sticker-gentei.png);
+}
+.single-item__img-wrap.gensen::before {
+  content: url(../img/top/sticker-gensen.png);
+}
+.single-item__img-wrap.kikan::before {
+  content: url(../img/top/sticker-kikan.png);
 }
 .single-item__img {
   border: #fff 12px solid;
@@ -602,33 +628,6 @@ textarea {
   width: 100%;
   overflow: hidden;
   display: block;
-}
-.single-item__img:before {
-  position: absolute;
-  top: -30px;
-  left: -30px;
-  transform: scale(0.4);
-  z-index: 10;
-}
-.single-item__img.tokubetsu::before {
-  content: url(../img/top/sticker-tokubetsu.png);
-}
-.single-item__img.gentei::before {
-  content: url(../img/top/sticker-gentei.png);
-}
-.single-item__img.gensen::before {
-  content: url(../img/top/sticker-gensen.png);
-}
-.single-item__img.kikan::before {
-  content: url(../img/top/sticker-kikan.png);
-}
-.single-item__img:after {
-  position: absolute;
-  bottom: -34px;
-  right: 0px;
-  transform: scale(0.4);
-  z-index: 10;
-  content: url(../img/top/item-arrow.png);
 }
 .single-item__img img {
   width: 100%;
@@ -647,63 +646,134 @@ textarea {
 .single-item__img img.current img {
   opacity: 1;
 }
+.single-item__sub-img-wrap {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.single-item__sub-img {
+  width: calc((100% - 24px) / 3);
+  position: relative;
+  overflow: hidden;
+  border: #fff 8px solid;
+  border-radius: 4px;
+}
+.single-item__sub-img:before {
+  content: "";
+  padding-top: 100%;
+  display: block;
+}
+.single-item__sub-img.current {
+  border: #848484 1px solid;
+}
+.single-item__sub-img.current img {
+  opacity: 1;
+}
+.single-item__sub-img img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.single-item__cat-wrap {
+  display: flex;
+  gap: 8px;
+  margin: 0 0 40px;
+}
+.single-item__cat {
+  width: 80px;
+  text-align: center;
+  color: #fff;
+  font-size: 13px;
+  padding: 2px 0 0 0;
+}
+.single-item__cat.cat01 {
+  background-color: #ff9933;
+}
+.single-item__cat.cat02 {
+  background-color: #96ca49;
+}
 .single-item__ttl {
-  padding: 0 4px;
-  margin: 0 0 12px;
+  font-size: 32px;
+  margin: 0 0 28px;
 }
 .single-item__ttl-span {
   display: block;
 }
 .single-item__lead {
   padding: 0 4px;
-  margin: 0 0 12px;
-  font-size: 12px;
+  margin: 0 0 28px;
+  font-size: 14px;
 }
 .single-item__price-wrap {
   border-top: 1px solid #bbbbbb;
   border-bottom: 1px solid #bbbbbb;
-  padding: 8px 4px;
+  padding: 10px 4px;
   display: flex;
   align-items: center;
   gap: 4px;
   margin: 0 0 12px;
+  justify-content: space-between;
 }
 .single-item__price {
-  font-size: 16px;
+  font-size: 26px;
   font-weight: bold;
   white-space: nowrap;
 }
 .single-item__price-tax {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: normal;
-  padding: 0 0 0 6px;
+  display: block;
 }
 .single-item__price-span {
   font-size: 12px;
   font-weight: normal;
 }
 .single-item__price-right {
-  text-align: center;
+  display: flex;
+  align-items: end;
+  gap: 8px;
+}
+.single-item__select-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.single-item__select-span {
+  font-size: 12px;
+}
+.single-item__select {
+  padding: 8px;
+  border: #ff9933 solid 1px;
+  width: 60px;
+  border-radius: 3px;
+}
+.single-item__souryou-text {
+  text-align: right;
+  margin: 0 0 24px;
+}
+.single-item__souryou-link {
+  color: #ff3333;
+  text-decoration: underline;
 }
 .single-item__input {
   border: none;
-  background-color: #f79f4d;
-  padding: 8px 8px;
+  background-color: #ff9933;
+  padding: 8px 12px;
   border-radius: 20px;
   font-size: 12px;
   font-weight: bold;
-  margin: 0 0 4px;
   cursor: pointer;
 }
 .single-item__input:hover {
   background-color: #ffddbc;
 }
-.single-item__price-text {
-  font-size: 11px;
-  white-space: nowrap;
-}
 .single-item__bottom-text {
-  font-size: 11px;
+  font-size: 14px;
   white-space: nowrap;
   padding: 0 4px;
   margin: 0 0 8px;
@@ -720,6 +790,10 @@ textarea {
   width: 80px;
   padding: 0 8px;
   position: relative;
+}
+.single-item__size-item.active {
+  background-color: #177139;
+  color: #fff;
 }
 .single-item__size-item:after {
   /* 擬似要素で矢印アイコンをつくる */

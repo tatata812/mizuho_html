@@ -219,20 +219,48 @@ $(function () {
   });
 
 
-  // 施工事例詳細
-  $(".js-sub-img img").on("click", function () {
-    // メイン画像に切り替えるimgのsrc取得
-    img = $(this).attr("src");
-    // currentクラス付け替え(枠線などを変えたい時に)
-    $(".js-sub-img").removeClass("current");
-    $(this).parent().addClass("current");
-    // fadeOutできたらsrc変更してfadeIn
-    $(".js-main-img img").fadeOut(500, function () {
-      $(".js-main-img img")
-        .attr("src", img)
-        .on("load", function () {
-          $(this).fadeIn(300);
+  // 商品詳細
+  $(function() {
+    $(".js-sub-img img").on("click", function() {
+      const imgSrc = $(this).attr("src");
+  
+      $(".js-sub-img").removeClass("current");
+      $(this).parent().addClass("current");
+  
+      const $mainImgContainer = $(".js-main-img");
+      const $currentImg = $mainImgContainer.find("img");
+  
+      // 新しい画像を作って、メイン画像の上に追加
+      const $newImg = $("<img>")
+        .attr("src", imgSrc)
+        .css({
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          opacity: 0,
+          zIndex: 2
         });
+  
+      $mainImgContainer.css("position", "relative").append($newImg);
+  
+      $newImg.on("load", function() {
+        // 新しい画像をフェードイン、古い画像をフェードアウト
+        $newImg.animate({ opacity: 1 }, 500, function() {
+          // 古い画像を削除して、新しい画像だけにする
+          $currentImg.remove();
+          $newImg.css({
+            position: "",
+            top: "",
+            left: "",
+            width: "",
+            height: "",
+            opacity: "",
+            zIndex: ""
+          });
+        });
+      });
     });
   });
 
