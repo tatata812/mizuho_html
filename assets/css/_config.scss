@@ -263,25 +263,25 @@ textarea {
       z-index: 10;
     }
 
-    &--tokubetsu {
+    &.tokubetsu {
       &::before {
         content: url(../img/top/sticker-tokubetsu.png);
       }
     }
 
-    &--gentei {
+    &.gentei {
       &::before {
         content: url(../img/top/sticker-gentei.png);
       }
     }
 
-    &--gensen {
+    &.gensen {
       &::before {
         content: url(../img/top/sticker-gensen.png);
       }
     }
 
-    &--kikan {
+    &.kikan {
       &::before {
         content: url(../img/top/sticker-kikan.png);
       }
