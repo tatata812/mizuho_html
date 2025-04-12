@@ -102,6 +102,21 @@ textarea {
     font-size: 20px;
   }
 }
+.subpage__section {
+  padding: 80px 12px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+.subpage__sub-ttl {
+  margin: 0 0 4px;
+}
+.subpage__text {
+  margin: 0 0 24px;
+}
+.subpage__text--last {
+  margin: 0;
+}
+
 .top-btn {
   background-color: #f2fbf7;
   padding: 40px;
@@ -1038,6 +1053,10 @@ textarea {
   content: "A.";
   position: absolute;
   left: -18px;
+  font-weight: bold;
+}
+.page-voice__answer::first-line {
+  font-weight: bold;
 }
 .page-voice__answer a {
   text-decoration: underline;
@@ -1045,6 +1064,11 @@ textarea {
 /* =================================
 
  ================================= */
+.page-privacy__section {
+  padding: 80px 12px;
+  max-width: 880px;
+  margin: 0 auto;
+}
 /* =================================
 
  ================================= */

@@ -714,6 +714,12 @@
       content: "A.";
       position: absolute;
       left: -18px;
+      font-weight: bold;
+
+    }
+
+    &::first-line {
+      font-weight: bold;
     }
 
     a {
@@ -743,18 +749,14 @@
 
  ================================= */
 
-.aaa {
+.page-privacy {
 
-  &__ {}
 
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
+  &__section {
+    padding: 80px 12px;
+    max-width: 880px;
+    margin: 0 auto;
+  }
   &__ {}
 
   &__ {}

@@ -126,13 +126,27 @@ textarea {
     }
   }
 
-  &__item-wrap {}
-
   &__ {}
 
-  &__ {}
+  &__section {
+    padding: 80px 12px;
+    max-width: 880px;
+    margin: 0 auto;
+  }
 
-  &__ {}
+  &__sub-ttl {
+    margin: 0 0 4px;
+  }
+
+  &__text {
+    margin: 0 0 24px;
+
+
+
+    &--last {
+margin: 0;
+    }
+  }
 }
 
 
