@@ -1006,8 +1006,42 @@ textarea {
   font-weight: normal;
 }
 /* =================================
-
+よくあるご質問
  ================================= */
+.page-voice__section {
+  padding: 80px 12px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+.page-voice__item {
+  border: #ededed 1px solid;
+  padding: 16px;
+  margin: 0 0 40px;
+}
+.page-voice__question {
+  border-bottom: #ededed 1px solid;
+  padding: 0 4px 12px;
+  position: relative;
+  margin: 0 0 0 24px;
+}
+.page-voice__question::before {
+  content: "Q.";
+  position: absolute;
+  left: -18px;
+}
+.page-voice__answer {
+  padding: 12px 4px 0;
+  position: relative;
+  margin: 0 0 0 24px;
+}
+.page-voice__answer::before {
+  content: "A.";
+  position: absolute;
+  left: -18px;
+}
+.page-voice__answer a {
+  text-decoration: underline;
+}
 /* =================================
 
  ================================= */
