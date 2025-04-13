@@ -121,6 +121,14 @@ textarea {
   background-color: #f2fbf7;
   padding: 40px;
 }
+.top-btn--none {
+  display: none;
+}
+@media (max-width: 820px) {
+  .top-btn--none {
+    display: none !important;
+  }
+}
 @media (max-width: 1120px) {
   .top-btn {
     padding: 24px;
