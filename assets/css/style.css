@@ -117,8 +117,14 @@ textarea {
   max-width: 880px;
   margin: 0 auto;
 }
+@media (max-width: 820px) {
+  .subpage__section {
+    padding: 40px 12px;
+  }
+}
 .subpage__sub-ttl {
-  margin: 0 0 4px;
+  font-size: 18px;
+  margin: 0 0 12px;
 }
 .subpage__text {
   margin: 0 0 24px;

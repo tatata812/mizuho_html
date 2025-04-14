@@ -142,10 +142,16 @@ textarea {
     padding: 80px 12px;
     max-width: 880px;
     margin: 0 auto;
+
+    @include tab{
+      padding: 40px 12px;
+
+    }
   }
 
   &__sub-ttl {
-    margin: 0 0 4px;
+    font-size: 18px;
+    margin: 0 0 12px;
   }
 
   &__text {
