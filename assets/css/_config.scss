@@ -155,7 +155,7 @@ margin: 0;
   background-color: #f2fbf7;
   padding: 40px;
 
-  }
+  
 
   @include pc {
     padding: 24px;
@@ -473,6 +473,15 @@ margin: 0;
     margin: 0 auto;
     padding: 6px 12px 0;
     font-size: 12px;
+  }
+
+  &.guide {
+    padding: 160px 12px 0;
+
+    @include tab{
+      padding: 114px 12px 0;
+    }
+
   }
 }
 
