@@ -1097,11 +1097,12 @@ textarea {
 ご利用案内
  ================================= */
 .page-guide {
-  margin: 0 0 24px;
+  margin: 80px 0 24px;
 }
 @media (max-width: 820px) {
   .page-guide {
     margin: 0;
+    margin: 53px 0 24px;
   }
 }
 .page-guide__section--bg {
@@ -1241,7 +1242,7 @@ textarea {
 }
 @media (max-width: 820px) {
   .guide-top {
-    padding: 8px 40px;
+    padding: 12px 12px;
   }
 }
 .guide-top__inner {
