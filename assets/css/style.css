@@ -1090,6 +1090,14 @@ textarea {
 /* =================================
 ご利用案内
  ================================= */
+.page-guide {
+  margin: 0 0 24px;
+}
+@media (max-width: 820px) {
+  .page-guide {
+    margin: 0;
+  }
+}
 .page-guide__section--bg {
   background-color: #f2fbf7;
 }

@@ -790,6 +790,11 @@
  ================================= */
 
 .page-guide {
+  margin: 0 0 24px;
+
+  @include tab{
+  margin: 0;
+  }
 
   &__ttl {}
 
