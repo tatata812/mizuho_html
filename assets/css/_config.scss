@@ -121,8 +121,18 @@ textarea {
   &__ttl {
     font-size: 32px;
 
-    @include tab{
-    font-size: 20px;
+    @include tab {
+      font-size: 20px;
+    }
+
+    &--wrap {
+      max-width: 1200px;
+      margin: 12px auto 0px;
+      padding: 0 12px;
+
+      @include tab {
+        margin: 12px auto 0px;
+      }
     }
   }
 
@@ -144,7 +154,7 @@ textarea {
 
 
     &--last {
-margin: 0;
+      margin: 0;
     }
   }
 }
@@ -155,7 +165,7 @@ margin: 0;
   background-color: #f2fbf7;
   padding: 40px;
 
-  
+
 
   @include pc {
     padding: 24px;
@@ -478,7 +488,7 @@ margin: 0;
   &.guide {
     padding: 160px 12px 0;
 
-    @include tab{
+    @include tab {
       padding: 114px 12px 0;
     }
 

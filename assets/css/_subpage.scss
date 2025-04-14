@@ -757,6 +757,7 @@
     max-width: 880px;
     margin: 0 auto;
   }
+
   &__ {}
 
   &__ {}
@@ -790,23 +791,165 @@
 
 .page-guide {
 
-  &__ {}
+  &__ttl {}
 
-  &__ {}
 
-  &__ {}
+  &__section {
 
-  &__ {}
+    &--bg {
+      background-color: #f2fbf7;
+    }
+  }
 
-  &__ {}
+  &__section-inner {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 80px 0;
 
-  &__ {}
+    @include tab{
+    padding: 40px 0;
+    }
 
-  &__ {}
 
-  &__ {}
 
-  &__ {}
+  }
+
+  
+
+
+  &__section-ttl-wrap {
+    display: flex;
+    max-width: 920px;
+    margin: 0 auto 40px;
+    align-items: center;
+    gap: 18px;
+    padding: 0 12px;
+
+    @include tab{
+    gap: 8px;
+    }
+  }
+
+  &__section-ttl-img {
+    width: 100px;
+
+    @include tab{
+    width: 50px;
+    }
+  }
+
+  &__section-ttl {
+    font-size: 30px;
+    border-bottom: #177139 1px solid;
+    flex: 1;
+    padding: 0 0 18px;
+
+    @include tab{
+    font-size: 22px;
+    padding: 0 0 3px;
+
+    }
+
+  }
+
+  &__inner {
+margin: 0 0 0 117px;
+padding: 0 12px 0 0;
+
+@include tab{
+margin: 0;
+padding: 0 12px;
+}
+  }
+
+  &__section-sub-ttl {
+    color: #177139;
+    border: #177139 1px solid;
+    padding: 0 12px;
+    display: inline-block;
+    font-size: 18px;
+    margin: 0 0 16px;
+
+    @include sp{
+    font-size: 16px;
+    }
+  }
+
+  &__section-text-wrap {
+    margin: 0 0 40px;
+  }
+
+  &__section-text {
+    margin: 0 0 16px;
+
+    &:last-of-type {
+      margin: 0;
+    }
+
+    a {
+      color: #2cb573;
+      border-bottom: #848484 1px solid;
+    }
+  }
+
+  &__tel-box {
+    border: #177139 solid 1px;
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  &__tel-img {
+    max-width: 220px;
+    margin: 24px auto 0;
+    display: block;
+  }
+
+  &__hyo-wrap {
+    margin: 0 0 24px;
+
+    @include tab{
+      overflow-x: scroll;
+
+    }
+  }
+
+  &__hyo {
+
+    @include tab{
+    width: 760px;
+    }
+  }
+
+  &__section-table {
+    max-width: 500px;
+    margin: 24px auto 40px;
+
+
+    table {
+      width: 100%;
+    }
+
+    table , td, th {
+      border: 1px solid #177139;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    td, th {
+      padding: 4px 10px;
+      width: 50%;
+
+      @include sp{
+      padding: 4px 6px;
+      }
+    }
+    th {
+      background-color: #f2fbf7;
+    }
+
+  }
 
   &__ {}
 
@@ -831,15 +974,12 @@
 .guide-top {
 
   background-color: #f2fbf7;
-  padding: 12px;
-  position: fixed;
-  width: 100vw;
-  z-index: 10;
+  padding: 24px 12px;
 
-  
 
-  @include pc {
-  }
+
+
+  @include pc {}
 
   @include tab {
     padding: 8px 40px;
@@ -867,8 +1007,8 @@
 
   &__item {
 
-      width: calc((100% - 96px) / 4);
-  
+    width: calc((100% - 96px) / 4);
+
 
     @include sp {
       width: calc((100% - 24px) / 4);
@@ -895,15 +1035,15 @@
     text-align: center;
     white-space: nowrap;
 
-    @include sp{
-    font-size: 12px;
+    @include sp {
+      font-size: 12px;
     }
   }
 
   &__img {
     margin: 0 0 16px;
 
-    @include sp{
+    @include sp {
       margin: 0 0 8px;
 
     }
