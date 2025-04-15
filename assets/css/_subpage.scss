@@ -47,7 +47,6 @@
       margin: 24px 0 12px;
 
     }
-
   }
 
   &__select {
@@ -56,9 +55,7 @@
     @include sp {
       margin: 0 0 0 auto;
     }
-
   }
-
 
   &__card-wrap {
     display: flex;
@@ -69,40 +66,16 @@
 
     @include pc {
       gap: 16px;
-
     }
 
     @include tab {
       margin: 0 0 24px;
-
     }
   }
 
   &__pager {
     text-align: center;
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
 /* =================================
@@ -114,7 +87,6 @@
 
   @include tab {
     padding: 0 12px 40px;
-
   }
 
   &__ttl-wrap {
@@ -139,7 +111,6 @@
   }
 
 
-
   &__section-ttl {
     position: relative;
     font-size: 28px;
@@ -159,7 +130,6 @@
       bottom: -10px;
       left: 0;
     }
-
   }
 
   &__section-ttl-wrap {
@@ -169,7 +139,6 @@
     @include tab {
       margin: 0 auto 40px;
     }
-
   }
 
   &__section-img {
@@ -177,7 +146,6 @@
 
     @include tab {
       margin: 0 0 24px;
-
     }
   }
 
@@ -229,16 +197,6 @@
     max-width: 800px;
     margin: 0 auto 24px;
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
 
@@ -257,8 +215,6 @@
     padding: 40px 12px;
     border-radius: 8px;
     margin: 0 auto 60px;
-
-
   }
 
   &__inner {
@@ -281,8 +237,6 @@
       width: 100%;
     }
   }
-
-  &__ {}
 
   &__img-wrap {
     position: relative;
@@ -339,10 +293,6 @@
       border: #fff 8px solid;
     }
 
-
-
-
-
     img {
       width: 100%;
       aspect-ratio: 1 / 1;
@@ -374,8 +324,6 @@
     }
   }
 
-
-
   &__sub-img {
     width: calc((100% - 24px) / 3);
     position: relative;
@@ -387,9 +335,6 @@
       border-radius: 4px;
       border: #fff 4px solid;
     }
-
-
-
 
     &:before {
       content: "";
@@ -425,7 +370,6 @@
 
     @include sp {
       margin: 0 0 12px;
-
     }
   }
 
@@ -436,8 +380,6 @@
     font-size: 13px;
     padding: 2px 0 0 0;
 
-
-
     &.cat01 {
       background-color: #ff9933;
     }
@@ -445,10 +387,7 @@
     &.cat02 {
       background-color: #96ca49;
     }
-
   }
-
-
 
   &__ttl {
     font-size: 32px;
@@ -479,10 +418,7 @@
     gap: 4px;
     margin: 0 0 12px;
     justify-content: space-between;
-
   }
-
-  &__price-left {}
 
   &__price {
     font-size: 26px;
@@ -504,7 +440,6 @@
     font-size: 12px;
     font-weight: normal;
   }
-
 
   &__price-right {
     display: flex;
@@ -550,16 +485,13 @@
     &:hover {
       background-color: #ffddbc;
     }
-
   }
-
 
   &__bottom-text {
     font-size: 14px;
     white-space: nowrap;
     padding: 0 4px;
     margin: 0 0 8px;
-
   }
 
   &__size-wrap {
@@ -572,7 +504,6 @@
     @include sp {
       margin: 0 0 32px;
     }
-
   }
 
   &__size-item {
@@ -587,9 +518,7 @@
       color: #fff;
     }
 
-
     &:after {
-      /* 擬似要素で矢印アイコンをつくる */
       content: '';
       border: 0;
       border-top: solid 2px #177139;
@@ -605,7 +534,6 @@
       /* rotate(45deg)で矢印を回転（向きを変更）させる */
       transition: all 0.5s;
     }
-
 
     &:hover {
       &:after {
@@ -633,11 +561,7 @@
     display: inline-block;
     padding: 0 0 8px;
     margin: 0 0 8px;
-
-
   }
-
-  &__description-text {}
 
   &__detail-wrap {
 
@@ -651,15 +575,6 @@
     }
   }
 
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
 /* =================================
@@ -667,14 +582,6 @@
  ================================= */
 
 .page-voice {
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
 
   &__section {
     padding: 80px 12px;
@@ -687,8 +594,6 @@
     padding: 16px;
     margin: 0 0 40px;
   }
-
-
 
   &__question {
     border-bottom: #ededed 1px solid;
@@ -725,65 +630,9 @@
     a {
       text-decoration: underline;
     }
-
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
-/* =================================
-
- ================================= */
-
-.page-privacy {
-
-
-  &__section {
-    padding: 80px 12px;
-    max-width: 880px;
-    margin: 0 auto;
-  }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
-}
 
 /* =================================
 ご利用案内
@@ -795,11 +644,7 @@
   @include tab {
     margin: 0;
     margin: 53px 0 24px;
-
   }
-
-  &__ttl {}
-
 
   &__section {
 
@@ -816,13 +661,7 @@
     @include tab {
       padding: 40px 0;
     }
-
-
-
   }
-
-
-
 
   &__section-ttl-wrap {
     display: flex;
@@ -854,9 +693,7 @@
     @include tab {
       font-size: 22px;
       padding: 0 0 3px;
-
     }
-
   }
 
   &__inner {
@@ -918,7 +755,6 @@
 
     @include tab {
       overflow-x: scroll;
-
     }
   }
 
@@ -962,26 +798,7 @@
     th {
       background-color: #f2fbf7;
     }
-
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
 
@@ -990,14 +807,8 @@
   background-color: #f2fbf7;
   padding: 24px 12px;
 
-
-
-
-  @include pc {}
-
   @include tab {
     padding: 12px 12px;
-
   }
 
   &__inner {

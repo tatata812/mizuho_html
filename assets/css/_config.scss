@@ -16,7 +16,6 @@
   }
 }
 
-
 * {
   word-break: break-word;
   box-sizing: border-box;
@@ -86,7 +85,6 @@ textarea {
   }
 }
 
-
 .black-bg {
   visibility: hidden;
   position: fixed;
@@ -106,8 +104,6 @@ textarea {
   }
 }
 
-
-
 .main {
   margin: 80px 0 0;
 
@@ -115,6 +111,7 @@ textarea {
     margin: 53px 0 0 0;
   }
 }
+// 下層ページスタイル
 
 .subpage {
 
@@ -153,10 +150,8 @@ textarea {
 
     @include tab{
       padding: 24px 12px;
-
     }
   }
-
 
   &__section-ttl {
     font-size: 28px;
@@ -167,34 +162,24 @@ textarea {
     @include tab{
     font-size: 18px;    
     padding: 0 0 0 0px;
-
     }
-
   }
 
   &__sub-ttl {
     font-size: 18px;
     margin: 0 0 12px;
-    // color: #177139;
-    // border: #177139 1px solid;
-    // padding: 0 12px;
-    // display: inline-block;
   }
 
   &__text {
     margin: 0 0 40px;
-
-
 
     &--last {
       margin: 0;
     }
   }
 
-
   &__section-table {
     margin: 24px auto 40px;
-
 
     table {
       width: 100%;
@@ -228,7 +213,6 @@ textarea {
         }
       }
     }
-
   }
 }
 
@@ -280,7 +264,6 @@ textarea {
 
     @include sp {
       width: calc((100% - 24px) / 3);
-
     }
 
     &.active {
@@ -317,7 +300,6 @@ textarea {
 }
 
 // 商品カード
-
 .item-card {
   width: 328px;
   padding: 20px;
@@ -325,9 +307,7 @@ textarea {
 
   @include sp {
     padding: 12px;
-
   }
-
 
   &.rice {
     background-color: #f2fbf7;
@@ -415,7 +395,6 @@ textarea {
   &__ttl {
     padding: 0 4px;
     margin: 0 0 12px;
-
   }
 
   &__ttl-span {
@@ -436,10 +415,7 @@ textarea {
     align-items: center;
     gap: 4px;
     margin: 0 0 12px;
-
   }
-
-  &__price-left {}
 
   &__price {
     font-size: 16px;
@@ -488,7 +464,6 @@ textarea {
     white-space: nowrap;
     padding: 0 4px;
     margin: 0 0 8px;
-
   }
 
   &__size-wrap {
@@ -506,9 +481,7 @@ textarea {
     padding: 0 8px;
     position: relative;
 
-
     &:after {
-      /* 擬似要素で矢印アイコンをつくる */
       content: '';
       border: 0;
       border-top: solid 2px #177139;
@@ -525,7 +498,6 @@ textarea {
       transition: all 0.5s;
     }
 
-
     &:hover {
       &:after {
         right: 3px;
@@ -536,7 +508,6 @@ textarea {
 
 // パンくずリスト
 .breadcrumbs-wrap {
-
   &__content {
     max-width: 1200px;
     margin: 0 auto;
@@ -568,8 +539,6 @@ textarea {
   width: 280px;
   border: #177139 2px solid;
   font-size: 16px;
-
-
 
   @include tab {
     width: 240px;
@@ -656,19 +625,17 @@ textarea {
   background-color: transparent;
 }
 
-
 // Googleマップ
 .map-wrap {
   margin: 0 auto;
-}
 
- .map {
+  .map {
     width: 100%;
     height: 0;
     position: relative;
     padding-top: 56.25%;
     overflow: hidden;
-
+    
     iframe {
       position: absolute;
       top: 0;
@@ -677,82 +644,5 @@ textarea {
       height: 100%;
     }
   }
-
-
-
-
-
-// エディター設定
-
-.page-style {
-  &__block {
-    margin: 0 0 40px;
-  }
-
-  .aligncenter {
-    display: block;
-    margin: 0 auto;
-  }
-
-  .alignright {
-    display: block;
-    margin-left: auto;
-  }
-
-  p {
-    margin: 0 0 12px;
-    line-height: 24px;
-  }
-
-  h1 {
-    font-size: 28px;
-    margin: 24px 0 32px;
-    background: linear-gradient(transparent 70%, #a7d6ff 70%);
-
-  }
-
-  h2 {
-    font-size: 22px;
-    margin: 24px 0 20px;
-    color: #177139;
-    font-weight: bold;
-
-    @include sp {
-      font-size: 20px;
-    }
-  }
-
-  h3 {
-    font-size: 20px;
-    margin: 24px 0 16px;
-
-    @include sp {
-      font-size: 18px;
-    }
-
-  }
-
-  a {
-    text-decoration: underline;
-  }
-
-  ol {
-    margin: 0 0 12px 24px;
-    line-height: 24px;
-
-    li {
-      list-style: decimal;
-    }
-  }
-
-  ul {
-    margin: 0 0 12px 24px;
-    line-height: 24px;
-
-    li {
-      list-style: disc;
-    }
-  }
-
-
 }
+

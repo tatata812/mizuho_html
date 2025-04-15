@@ -32,11 +32,9 @@ header
   background-color: #fff;
   border-bottom: #8a725a 2px solid;
 
-
   &.is-hide {
     transform: translateY(-100%);
   }
-
 
   &__inner {
     display: flex;
@@ -49,17 +47,13 @@ header
 
     @include pc {
       padding: 8px 12px 6px;
-
     }
-
 
     @include tab {
       justify-content: space-between;
       padding: 8px 12px 6px;
-
     }
   }
-
 
   &__ttl-wrap {
     max-width: 200px;
@@ -92,7 +86,7 @@ header
       color: #fff;
       background-color: #8a725a;
       padding: 1px 8px 0;
-       border-radius: 4px;
+      border-radius: 4px;
     }
   }
 
@@ -134,8 +128,6 @@ header
         content: url(../img/top/cart.svg);
       }
     }
-
-
   }
 
   &__search-wrap {
@@ -160,8 +152,6 @@ header
       border-width: 0 8px 8px 8px;
       border-color: transparent transparent #177139 transparent;
     }
-
-
 
     form {
       display: flex;
@@ -276,7 +266,6 @@ header
     position: absolute;
   }
 
-
   &__menu {
     display: flex;
     justify-content: center;
@@ -301,14 +290,10 @@ header
     justify-content: flex-start;
     margin: 0 0 40px;
 
-
-
-
     form {
       display: flex;
       gap: 4px;
       width: 100%;
-
     }
 
     input {
@@ -335,7 +320,6 @@ header
 }
 
 
-
 /* =================================
 メインビジュアル
  ================================= */
@@ -349,8 +333,6 @@ header
   @include tab {
     padding: 0 0 12px;
     margin: 0 0 24px;
-
-
   }
 
   // スライダー
@@ -405,7 +387,6 @@ header
       }
     }
 
-
     .slick-next:before {
       left: -6px;
     }
@@ -426,7 +407,6 @@ header
   margin: 0 0 24px;
   position: relative;
 
-
   &__img {
     position: absolute;
     top: 50%;
@@ -440,7 +420,6 @@ header
 
     }
   }
-
 }
 
 
@@ -449,14 +428,14 @@ header
 買い物ガイド
  ================================= */
 
- .top-guide {
+.top-guide {
   background-image: url(../img/top/top-guide-bg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   padding: 40px 12px;
 
-  @include tab{
+  @include tab {
     padding: 24px 12px;
   }
 
@@ -466,85 +445,50 @@ header
     max-width: 880px;
     margin: 0 auto;
 
-    @include tab{
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
+    @include tab {
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
     }
   }
 
   &__item {
 
-    @include tab{
-    max-width: 400px;
+    @include tab {
+      max-width: 400px;
     }
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
 /* =================================
 おすすめ商品
  ================================= */
-
- .top-recs {
+.top-recs {
   padding: 60px 0;
 
-  @include tab{
+  @include tab {
     padding: 40px 0;
-
   }
 
   &__ttl-wrap {
-     padding: 0 12px;
+    padding: 0 12px;
   }
 
   &__ttl {
     border-bottom: #177139 solid 1px;
-     max-width: 800px;
-     margin: 0 auto 40px;
-     font-size: 32px;
-     padding: 0 0 16px 60px;
-     position: relative;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 32px;
+    padding: 0 0 16px 60px;
+    position: relative;
 
-     @include tab{
+    @include tab {
       padding: 0 0 8px 32px;
       margin: 0 auto 40px;
       font-size: 24px;
-     }
+    }
 
-
-     &:before {
+    &:before {
       content: '';
       position: absolute;
       bottom: 0;
@@ -557,13 +501,11 @@ header
     }
   }
 
-
-
   &__btn {
     text-align: center;
     margin: 80px 0 0;
 
-    @include tab{
+    @include tab {
       margin: 60px 0 0;
 
     }
@@ -574,9 +516,8 @@ header
     display: flex;
     gap: 18px;
 
-    @include sp{
+    @include sp {
       gap: 8px;
-
     }
   }
 
@@ -628,23 +569,20 @@ header
     }
   }
 
-
   .slick-next:before {
     left: -6px;
   }
 
   .slick-prev:before {
     left: 6px;
-
   }
-
 }
 
 /* =================================
 取り扱い商品
  ================================= */
 
- .top-handling {
+.top-handling {
 
   background-image: url(../img/top/top-handling-bg.png);
   background-repeat: no-repeat;
@@ -653,41 +591,40 @@ header
   padding: 80px 12px;
   margin: 0 0 24px;
 
-  @include tab{
+  @include tab {
     padding: 40px 12px;
   }
 
   &__ttl-wrap {
     padding: 0 12px;
- }
+  }
 
- &__ttl {
-   border-bottom: #177139 solid 1px;
+  &__ttl {
+    border-bottom: #177139 solid 1px;
     max-width: 800px;
     margin: 0 auto 40px;
     font-size: 32px;
     padding: 0 0 16px 60px;
     position: relative;
 
-    @include tab{
-     padding: 0 0 8px 32px;
-     margin: 0 auto 40px;
-     font-size: 24px;
+    @include tab {
+      padding: 0 0 8px 32px;
+      margin: 0 auto 40px;
+      font-size: 24px;
     }
 
-
     &:before {
-     content: '';
-     position: absolute;
-     bottom: 0;
-     left: 0;
-     width: 0;
-     height: 0;
-     border-style: solid;
-     border-color: transparent transparent transparent #177139;
-     border-width: 31px 0px 0px 15px;
-   }
- }
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-color: transparent transparent transparent #177139;
+      border-width: 31px 0px 0px 15px;
+    }
+  }
 
   &__inner {
     display: flex;
@@ -703,16 +640,14 @@ header
     padding: 0 12px;
     margin: 0 0 40px;
 
-    @include pc{
+    @include pc {
       width: calc((100% - 24px) / 2);
       max-width: 400px;
-
     }
 
-    @include tab{
-    width: 100%;
-    max-width: 400px;
-
+    @include tab {
+      width: 100%;
+      max-width: 400px;
     }
   }
 
@@ -720,7 +655,7 @@ header
     width: 180px;
     margin: 0 auto 24px;
 
-    @include tab{
+    @include tab {
       margin: 0 auto 12px;
       width: 150px;
 
@@ -736,62 +671,42 @@ header
     padding: 0 0 12px;
     position: relative;
 
-    @include tab{
-     padding: 0 0 8px ;
-     margin: 0 auto 12px;
-     font-size: 20px;
+    @include tab {
+      padding: 0 0 8px;
+      margin: 0 auto 12px;
+      font-size: 20px;
     }
 
-
     &:before {
-     content: '';
-     position: absolute;
-     bottom: 0;
-     right: 0;
-     width: 0;
-     height: 0;
-     border-style: solid;
-     border-color: transparent transparent #177139 transparent;
-     border-width: 0px 0px 26px 12px;
-   }
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-color: transparent transparent #177139 transparent;
+      border-width: 0px 0px 26px 12px;
+    }
   }
 
   &__text {
     font-size: 12px;
     margin: 0 0 24px;
-min-height: 80px;
+    min-height: 80px;
 
-@include pc{
-  min-height: auto;
-}
+    @include pc {
+      min-height: auto;
+    }
 
-@include tab{
-  margin: 0 0 12px;
-
-}
+    @include tab {
+      margin: 0 0 12px;
+    }
   }
 
   &__btn {
     text-align: center;
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
 
@@ -805,30 +720,29 @@ footer
   padding: 40px 0 0;
   position: relative;
 
-  @include tab{
-  padding: 0;
+  @include tab {
+    padding: 0;
   }
 
   &__top {
-   background-color: #fff;
-   padding: 80px 12px;
-   border-top: #177139 1px solid;
-   border-bottom: #177139 1px solid;
+    background-color: #fff;
+    padding: 80px 12px;
+    border-top: #177139 1px solid;
+    border-bottom: #177139 1px solid;
 
-   @include tab{
-    padding: 32px 12px;
-   }
-
+    @include tab {
+      padding: 32px 12px;
+    }
   }
 
   &__top-inner {
-display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
 
-@include tab{
-flex-direction: column;
-align-items: center;
-}
+    @include tab {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
 
@@ -836,11 +750,10 @@ align-items: center;
     border-right: #b6b6b6 solid 1px;
     padding: 24px 60px 24px 0;
 
-    @include tab{
+    @include tab {
       border-right: none;
       padding: 0;
       margin: 0 0 32px;
-
     }
   }
 
@@ -849,8 +762,6 @@ align-items: center;
     display: block;
     margin: 0 0 40px;
   }
-
-  &__tel-wrap {}
 
   &__tel-text {
     font-size: 12px;
@@ -871,18 +782,13 @@ align-items: center;
     display: flex;
     gap: 40px;
 
-    @include sp{
-    flex-direction: column;
-    gap: 32px;
-    padding: 0;
-    width: 85%;
-
+    @include sp {
+      flex-direction: column;
+      gap: 32px;
+      padding: 0;
+      width: 85%;
     }
   }
-
-  &__nav-left {}
-
-  &__nav-right {}
 
   &__nav-item {
     display: block;
@@ -891,7 +797,6 @@ align-items: center;
 
     &--margin {
       margin: 0 0 32px;
- 
     }
   }
 
@@ -901,7 +806,7 @@ align-items: center;
     padding: 12px;
   }
 
-  &__go-to-btn  {
+  &__go-to-btn {
     width: 60px;
     position: fixed;
     bottom: 30px;
@@ -909,11 +814,6 @@ align-items: center;
 
     &--osusume {
       bottom: 100px;
-
     }
   }
-
-
 }
-
-

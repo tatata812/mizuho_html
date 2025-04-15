@@ -87,7 +87,6 @@
         <img src="assets/img/top/hun-btn.png" alt="">
       </div>
     </div>
-
     <div class="header-sp">
       <div class="header-sp__inner">
         <div class="header-sp__btn-img">
@@ -128,6 +127,7 @@
     <!-- ページトップのオススメボタン　トップページと商品一覧ページのみ表示させる -->
     <section class="top-btn">
       <div class="top-btn__inner">
+        <!-- ↓クラスの有無でスタイル変更 active-->
         <a href="archive.html" class="top-btn__item active">
           <div class="top-btn__img">
             <img src="assets/img/top/top-btn01.png" alt="おすすめ商品">
@@ -180,6 +180,7 @@
     <section class="archive__section">
       <div class="archive__ttl-wrap">
         <h1 class="archive__ttl subpage__ttl">おすすめ商品</h1>
+        <!-- 並び替え用セレクトボックス -->
         <select class="archive__select">
           <option value="" class="archive__select-item">並べ替え：おすすめ</option>
           <option value="" class="archive__select-item">並べ替え：限定商品</option>
@@ -215,7 +216,7 @@
           </div>
         </div>
         <!-- 商品カード ここまで-->
-         
+
         <div class="top-recs__card item-card other">
           <div class="item-card__img-wrap gentei">
             <a href="single.html" class="item-card__img">
@@ -440,10 +441,8 @@
     <!-- オススメ商品表示（トップと商品一覧ページ）以外のページでは非表示 -->
     <p class="footer__go-to-btn footer__go-to-btn--osusume osusume-js sp-block"><img
         src="assets/img/top/osusume-btn.png" alt=""></p>
-
     <a href="#" class="footer__go-to-btn top-to-js"><img src="assets/img/top/go-top-btn.png" alt=""></a>
   </footer>
-
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="assets/js/main.js">
   </script>

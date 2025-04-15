@@ -1,5 +1,6 @@
 $(function () {
 
+// SPメニュー
   $("#js-hamburger-menu, .navigation__link").click(function () {
     $(".header-sp,.black-bg,.header").toggleClass("active"); //ボタン自身に activeクラスを付与し
   });
@@ -8,33 +9,32 @@ $(function () {
     $('.hamburger-menu').toggleClass('hamburger-menu--open');
   });
 
-  // ハンバーガーメニュー
-  $(function () {
-    $('#js-hamburger-menu, .navigation__link').on('click', function () {
-      $('.navigation').slideToggle(500);
-      $('.hamburger-menu').toggleClass('hamburger-menu--open')
-    });
+  $('#js-hamburger-menu, .navigation__link').on('click', function () {
+    $('.navigation').slideToggle(500);
+    $('.hamburger-menu').toggleClass('hamburger-menu--open')
   });
 
 
-// TOPへボタン
+  // TOPへボタン
   $(function () {
     var $topButton = $(".top-to-js");
     var $footer = $("footer"); // フッター要素を取得
-  
+
     // トップへスクロール
     $topButton.click(function (e) {
       e.preventDefault();
       e.stopPropagation();
-      $("html, body").animate({ scrollTop: 0 }, 500);
+      $("html, body").animate({
+        scrollTop: 0
+      }, 500);
     });
-  
+
     // スクロール時の処理
     $(window).scroll(function () {
       var scrollTop = $(window).scrollTop();
       var windowHeight = $(window).height();
       var footerTop = $footer.offset().top;
-  
+
       // フッターに達したかどうか
       if (scrollTop + windowHeight >= footerTop) {
         $topButton.fadeOut();
@@ -45,38 +45,32 @@ $(function () {
   });
 
 
-  // おすすめボタン
+  // おすすめボタン spでは表示・クリックで切り替え
   $(function () {
     var $topButton = $(".top-btn");
     var $osusumeButton = $(".osusume-js");
     var $footer = $("footer");
-  
-    // 最初は top ボタン非表示（ただし初回チェックで制御される）
+
     $topButton.hide();
-  
-    // おすすめボタンをクリックしたら top ボタンを表示
     $osusumeButton.click(function (e) {
       e.preventDefault();
       e.stopPropagation();
       $topButton.css("display", "block");
     });
-  
-    // top ボタンのバツをクリックしたら top ボタンを非表示（イベント委任）
+
     $(document).on("click", ".top-btn__batsu", function (e) {
       e.preventDefault();
       e.stopPropagation();
-      // 画面幅 820px 未満のときだけ非表示にする
       if ($(window).width() < 820) {
         $topButton.css("display", "none");
       }
     });
-  
-    // スクロール時にフッター到達チェック
+
     $(window).scroll(function () {
       var scrollTop = $(window).scrollTop();
       var windowHeight = $(window).height();
       var footerTop = $footer.offset().top;
-  
+
       if (scrollTop + windowHeight >= footerTop) {
         $osusumeButton.fadeOut();
       } else {
@@ -85,8 +79,7 @@ $(function () {
         }
       }
     });
-  
-    // 画面サイズによる表示切り替え
+
     function checkWindowSize() {
       if ($(window).width() >= 820) {
         // 820px 以上なら
@@ -98,18 +91,12 @@ $(function () {
         $osusumeButton.show();
       }
     }
-  
-    // 読み込み時にもチェック
     checkWindowSize();
-  
-    // リサイズ時にもチェック
+
     $(window).resize(function () {
       checkWindowSize();
     });
   });
-  
-  
-
 
 
   // サーチボタン・アカウントボタン
@@ -159,7 +146,6 @@ $(function () {
       settings: {
         centerMode: false,
         arrows: false, // 矢印非表示
-
       }
     }]
   })
@@ -197,7 +183,6 @@ $(function () {
     dots: true,
     dotsClass: 'dots-wrap',
 
-
     responsive: [{
         breakpoint: 800,
         settings: {
@@ -219,17 +204,17 @@ $(function () {
   });
 
 
-  // 商品詳細
-  $(function() {
-    $(".js-sub-img img").on("click", function() {
+  // 商品詳細　画像の切り替え
+  $(function () {
+    $(".js-sub-img img").on("click", function () {
       const imgSrc = $(this).attr("src");
-  
+
       $(".js-sub-img").removeClass("current");
       $(this).parent().addClass("current");
-  
+
       const $mainImgContainer = $(".js-main-img");
       const $currentImg = $mainImgContainer.find("img");
-  
+
       // 新しい画像を作って、メイン画像の上に追加
       const $newImg = $("<img>")
         .attr("src", imgSrc)
@@ -242,12 +227,14 @@ $(function () {
           opacity: 0,
           zIndex: 2
         });
-  
+
       $mainImgContainer.css("position", "relative").append($newImg);
-  
-      $newImg.on("load", function() {
+
+      $newImg.on("load", function () {
         // 新しい画像をフェードイン、古い画像をフェードアウト
-        $newImg.animate({ opacity: 1 }, 500, function() {
+        $newImg.animate({
+          opacity: 1
+        }, 500, function () {
           // 古い画像を削除して、新しい画像だけにする
           $currentImg.remove();
           $newImg.css({
@@ -295,9 +282,3 @@ $(function () {
 
 })
 
-// パララックス
-
-var image = document.getElementsByClassName('sub-top-js');
-new simpleParallax(image, {
-  scale: 1.2,
-});
