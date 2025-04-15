@@ -112,6 +112,14 @@ textarea {
     margin: 12px auto 0px;
   }
 }
+.subpage__ttl--center {
+  text-align: center;
+}
+@media (max-width: 820px) {
+  .subpage__ttl--center {
+    text-align: left;
+  }
+}
 .subpage__section {
   padding: 80px 12px;
   max-width: 880px;
@@ -119,7 +127,7 @@ textarea {
 }
 @media (max-width: 820px) {
   .subpage__section {
-    padding: 40px 12px;
+    padding: 24px 12px;
   }
 }
 .subpage__sub-ttl {
@@ -131,6 +139,39 @@ textarea {
 }
 .subpage__text--last {
   margin: 0;
+}
+.subpage__section-table {
+  margin: 24px auto 40px;
+}
+.subpage__section-table table {
+  width: 100%;
+}
+.subpage__section-table table, .subpage__section-table td, .subpage__section-table th {
+  border: 1px solid #177139;
+  border-collapse: collapse;
+  text-align: left;
+}
+.subpage__section-table td, .subpage__section-table th {
+  padding: 4px 10px;
+}
+@media (max-width: 600px) {
+  .subpage__section-table td, .subpage__section-table th {
+    padding: 4px 6px;
+  }
+}
+.subpage__section-table th {
+  background-color: #f2fbf7;
+}
+.subpage__section-table--about {
+  margin: 0px auto 24px;
+}
+.subpage__section-table--about th {
+  width: 160px;
+}
+@media (max-width: 820px) {
+  .subpage__section-table--about th {
+    width: 110px;
+  }
 }
 
 .top-btn {
@@ -489,6 +530,25 @@ textarea {
   padding: 0;
   border: none;
   background-color: transparent;
+}
+
+.map-wrap {
+  margin: 0 auto;
+}
+
+.map {
+  width: 100%;
+  height: 0;
+  position: relative;
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+.map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .page-style__block {
@@ -1214,22 +1274,31 @@ textarea {
 }
 .page-guide__section-table {
   max-width: 500px;
-  margin: 24px auto 40px;
+  margin: 0 auto 40px;
+}
+@media (max-width: 820px) {
+  .page-guide__section-table {
+    margin: 0 auto 24px;
+  }
 }
 .page-guide__section-table table {
   width: 100%;
 }
-.page-guide__section-table table, .page-guide__section-table td, .page-guide__section-table th {
+.page-guide__section-table table,
+.page-guide__section-table td,
+.page-guide__section-table th {
   border: 1px solid #177139;
   border-collapse: collapse;
   text-align: left;
 }
-.page-guide__section-table td, .page-guide__section-table th {
+.page-guide__section-table td,
+.page-guide__section-table th {
   padding: 4px 10px;
   width: 50%;
 }
 @media (max-width: 600px) {
-  .page-guide__section-table td, .page-guide__section-table th {
+  .page-guide__section-table td,
+  .page-guide__section-table th {
     padding: 4px 6px;
   }
 }
