@@ -157,6 +157,21 @@ textarea {
     }
   }
 
+
+  &__section-ttl {
+    font-size: 28px;
+    margin: 0 0 12px;
+    border-bottom: 2px solid #177139;
+    padding: 0 0 0 12px;
+
+    @include tab{
+    font-size: 18px;    
+    padding: 0 0 0 0px;
+
+    }
+
+  }
+
   &__sub-ttl {
     font-size: 18px;
     margin: 0 0 12px;

@@ -130,6 +130,18 @@ textarea {
     padding: 24px 12px;
   }
 }
+.subpage__section-ttl {
+  font-size: 28px;
+  margin: 0 0 12px;
+  border-bottom: 2px solid #177139;
+  padding: 0 0 0 12px;
+}
+@media (max-width: 820px) {
+  .subpage__section-ttl {
+    font-size: 18px;
+    padding: 0 0 0 0px;
+  }
+}
 .subpage__sub-ttl {
   font-size: 18px;
   margin: 0 0 12px;
