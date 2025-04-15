@@ -646,3 +646,93 @@ textarea {
   }
 }
 
+
+// エディター
+.page-style {
+  &__block {
+    margin: 0 0 40px;
+  }
+
+  .aligncenter {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .alignright {
+    display: block;
+    margin-left: auto;
+  }
+
+  p {
+    margin: 0 0 12px;
+    line-height: 24px;
+  }
+
+  h1 {
+    position: relative;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 0 24px;
+
+
+    @include tab {
+      font-size: 20px;
+    }
+
+    &:after {
+      content: '';
+      width: 110px;
+      height: 3px;
+      display: inline-block;
+      background-color: #177139;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+    }
+  }
+
+  h2 {
+    font-size: 22px;
+    margin: 24px 0 12px;
+    color: #177139;
+    font-weight: bold;
+
+    @include sp {
+      font-size: 20px;
+    }
+  }
+
+  h3 {
+    font-size: 20px;
+    margin: 24px 0 8px;
+
+    @include sp {
+      font-size: 18px;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  ol {
+    margin: 0 0 12px 24px;
+    line-height: 24px;
+
+    li {
+      list-style: decimal;
+    }
+  }
+
+  ul {
+    margin: 0 0 12px 24px;
+    line-height: 24px;
+
+    li {
+      list-style: disc;
+    }
+  }
+
+
+}
+
