@@ -1401,8 +1401,126 @@ textarea {
 }
 
 /* =================================
-
+お問い合わせ
  ================================= */
+.page-contact {
+  padding: 0 12px;
+}
+.page-contact__section {
+  max-width: 920px;
+  margin: 40px auto 80px;
+}
+@media (max-width: 600px) {
+  .page-contact__section {
+    margin: 0 auto 40px;
+  }
+}
+.page-contact__text {
+  margin: 0 0 24px;
+}
+.page-contact__table {
+  width: 100%;
+  font-size: 15px;
+  margin: 0 auto 40px;
+}
+@media (max-width: 820px) {
+  .page-contact__table {
+    width: 100%;
+    margin: 0 auto 40px;
+  }
+}
+.page-contact__table tr {
+  border-bottom: #177139 dotted 1px;
+}
+.page-contact__table tr:first-of-type {
+  border-top: #177139 dotted 1px;
+}
+.page-contact__table th {
+  text-align: left;
+  vertical-align: middle;
+  padding: 8px 20px 8px 28px;
+  font-weight: 500;
+  width: 240px;
+}
+@media (max-width: 820px) {
+  .page-contact__table th {
+    padding: 12px 0 4px 2px;
+    display: block;
+    width: 200px;
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .page-contact__table th {
+    font-size: 13px;
+  }
+}
+.page-contact__table td {
+  text-align: left;
+  vertical-align: middle;
+  padding: 8px 20px 8px 28px;
+}
+@media (max-width: 820px) {
+  .page-contact__table td {
+    display: block;
+    padding: 8px;
+  }
+}
+@media (max-width: 600px) {
+  .page-contact__table td {
+    font-size: 13px;
+  }
+}
+.page-contact__table input[type=text],
+.page-contact__table textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 20px;
+  border: #848484 1px solid;
+  font-size: 16px;
+}
+.page-contact__table input[type=radio] {
+  width: 14px;
+  height: 14px;
+  border-radius: 15px;
+  border: #848484 1px solid;
+  margin: 0 4px 4px;
+}
+.page-contact__table label {
+  display: inline-block;
+}
+.page-contact__table-span {
+  color: #fff;
+  background-color: #d40000;
+  padding: 0 4px;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-left: auto;
+  display: inline-block;
+  float: right;
+}
+@media (max-width: 820px) {
+  .page-contact__table-span {
+    margin: 0 12px 0;
+  }
+}
+.page-contact button {
+  display: block;
+  text-align: center;
+  width: 120px;
+  margin: 0 auto;
+  background-color: #177139;
+  color: #f2f2f2;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+.page-contact button:hover {
+  opacity: 0.7;
+}
+.page-contact__input-s input[type=text] {
+  width: 50%;
+}
 /* =================================
 header
  ================================= */

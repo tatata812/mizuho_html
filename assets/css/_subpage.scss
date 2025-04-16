@@ -888,34 +888,141 @@
 }
 
 /* =================================
-
+お問い合わせ
  ================================= */
 
-.aaa {
+.page-contact {
+  padding: 0 12px;
 
-  &__ {}
 
-  &__ {}
 
-  &__ {}
+  &__section {
+    max-width: 920px;
+    margin: 40px auto 80px;
 
-  &__ {}
+    @include sp{
+      margin: 0 auto 40px;
+    }
+  }
 
-  &__ {}
+  &__text {
+    margin: 0 0 24px;
+  }
 
-  &__ {}
+  &__table {
+    width: 100%;
+    font-size: 15px;
+    margin: 0 auto 40px;
 
-  &__ {}
 
-  &__ {}
+    @include tab {
+      width: 100%;
+      margin: 0 auto 40px;
+    }
 
-  &__ {}
+    tr {
+      border-bottom: #177139 dotted 1px;
 
-  &__ {}
+      &:first-of-type {
+        border-top: #177139 dotted 1px;
+      }
+    }
 
-  &__ {}
 
-  &__ {}
+    th {
+      text-align: left;
+      vertical-align: middle;
+      padding: 8px 20px 8px 28px;
+      font-weight: 500;
+      width: 240px;
+
+      @include tab {
+        padding: 12px 0 4px 2px;
+        display: block;
+        width: 200px;
+        width: 100%;
+      }
+
+      @include sp {
+        font-size: 13px;
+      }
+    }
+
+    td {
+      text-align: left;
+      vertical-align: middle;
+      padding: 8px 20px 8px 28px;
+
+      @include tab {
+        display: block;
+        padding: 8px;
+      }
+
+
+      @include sp {
+        font-size: 13px;
+      }
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      font-size: 20px;
+      border: #848484 1px solid;
+      font-size: 16px;
+    }
+
+    input[type="radio"] {
+      width: 14px;
+      height: 14px;
+      border-radius: 15px;
+      border: #848484 1px solid;
+      margin: 0 4px 4px ;
+    }
+
+    label {
+      display: inline-block;
+    }
+  }
+
+  &__table-span {
+    color: #fff;
+    background-color: #d40000;
+    padding: 0 4px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: auto;
+    display: inline-block;
+    float: right;
+
+    @include tab{
+    margin: 0 12px 0;
+    }
+  }
+
+  button {
+    display: block;
+    text-align: center;
+    width: 120px;
+    margin: 0 auto;
+    background-color: #177139;
+    color: #f2f2f2;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__input-s {
+    input[type="text"] {
+      width: 50%;
+    
+    }
+  }
 
   &__ {}
 
