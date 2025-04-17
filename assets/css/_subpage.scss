@@ -105,9 +105,7 @@
     }
   }
 
-  &__section {
-
-  }
+  &__section {}
 
   &__section-inner {
     max-width: 1080px;
@@ -900,7 +898,7 @@
     max-width: 920px;
     margin: 40px auto 80px;
 
-    @include sp{
+    @include sp {
       margin: 0 auto 40px;
     }
   }
@@ -978,7 +976,7 @@
       height: 14px;
       border-radius: 15px;
       border: #848484 1px solid;
-      margin: 0 4px 4px ;
+      margin: 0 4px 4px;
     }
 
     label {
@@ -996,9 +994,9 @@
     display: inline-block;
     float: right;
 
-    @include tab{
-    margin: 0 12px 0;
-    font-size: 10px;
+    @include tab {
+      margin: 0 12px 0;
+      font-size: 10px;
 
     }
   }
@@ -1022,9 +1020,328 @@
   &__input-s {
     input[type="text"] {
       width: 50%;
-    
+
     }
   }
+}
+
+/* =================================
+みずほ屋について
+ ================================= */
+
+.page-about {
+
+  &__section01 {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 12px 120px;
+
+    @include tab {
+      padding: 0 12px 40px;
+    }
+  }
+
+  &__section01-top-img01 {
+    margin: 0 0 40px;
+
+    @include tab {
+      margin: 0 0 16px;
+    }
+  }
+
+  &__section01-top-img02 {
+    width: 80%;
+    margin: 0 auto 40px;
+
+    @include tab {
+      width: 95%;
+    }
+  }
+
+  &__section01-ttl {
+    color: #a27a51;
+    border-bottom: #2cb573 1px solid;
+    font-size: 26px;
+    font-weight: normal;
+    padding: 60px 0 8px;
+    position: relative;
+    margin: 0 0 24px;
+
+    &::before {
+      content: url(../img/subpage/about-section01-ttl.png);
+      position: absolute;
+      top: -44px;
+      left: -82px;
+      transform: scale(0.4);
+    }
+
+    @include tab {
+      font-size: 18px;
+      padding: 30px 0 8px;
+      line-height: 1.3;
+      margin: 0 0 12px;
+
+      &::before {
+        top: -61px;
+        left: -99px;
+        transform: scale(0.2);
+      }
+    }
+  }
+
+  &__section01-text-wrap {
+    max-width: 740px;
+    margin: 0 auto 40px;
+
+    @include tab {
+      margin: 0 auto 40px;
+    }
+  }
+
+  &__section01-text {
+    margin: 0 0 24px;
+
+    @include tab {
+      margin: 0 0 16px;
+    }
+  }
+
+  &__section02 {
+    background-color: #f2fbf7;
+    padding: 120px 12px;
+
+    @include tab {
+      padding: 40px 12px;
+    }
+  }
+
+  &__section02-inner {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  &__section02-ttl {
+    font-size: 32px;
+    margin: 0 0 40px;
+    color: #808080;
+
+    @include tab {
+      font-size: 20px;
+      margin: 0 0 24px;
+    }
+  }
+
+  &__section02-box {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+
+    @include sp {
+      gap: 12px;
+    }
+  }
+
+  &__section02-item {
+    width: calc((100% - 40px) / 2);
+
+    @include sp {
+      width: 100%;
+    }
+  }
+}
+
+/* =================================
+会社概要
+ ================================= */
+
+.page-company {
+
+  &__section01 {
+    background-image: linear-gradient(0deg, #f2fbf7, #ffffff);
+    padding: 40px 12px 80px;
+
+    @include tab {
+      padding: 0 12px 40px;
+    }
+  }
+
+  &__section01-inner {
+    background-color: #fff;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 32px;
+
+    @include tab {
+      padding: 12px;
+    }
+  }
+
+  &__section01-lead {
+    font-size: 28px;
+    text-align: center;
+    color: #177139;
+    margin: 0 0 40px;
+
+    @include tab {
+      font-size: 18px;
+      white-space: nowrap;
+      margin: 0 0 12px;
+    }
+  }
+
+  &__section01-box {
+    display: flex;
+    gap: 40px;
+
+    @include tab {
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+  }
+
+  &__section01-left {
+    width: 34%;
+
+    @include tab {
+      width: 100%;
+      max-width: 280px;
+    }
+  }
+
+  &__section01-right {
+    flex: 1;
+  }
+
+  &__section01-text {
+    margin: 0 0 24px;
+
+    &--right {
+      text-align: right;
+    }
+  }
+
+  &__sub-ttl {
+    margin: 60px auto 0px;
+
+    @include tab {
+      margin: 24px auto 0px;
+    }
+
+    &--section03 {
+      margin: 0 auto 60px;
+
+      @include tab {
+        margin: 0 auto 16px;
+      }
+    }
+  }
+
+  &__section03 {
+    background-color: #f2fbf7;
+    padding: 80px 12px 40px;
+
+    @include tab {
+      padding: 40px 12px 8px;
+
+    }
+  }
+
+  &__section03-item {
+    max-width: 980px;
+    margin: 0 auto 60px;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+
+    @include tab {
+      gap: 32px;
+    }
+
+    @include sp {
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 480px;
+      margin: 0 auto 0;
+      gap: 16px;
+    }
+  }
+
+  &__section03-left {
+    width: 500px;
+
+    iframe {
+      border-radius: 20px;
+    }
+
+    @include tab {
+      width: 380px;
+
+      iframe {
+        border-radius: 12px;
+      }
+    }
+
+    @include tab {
+      width: 100%;
+    }
+  }
+
+  &__section03-right {
+    flex: 1;
+  }
+
+  &__section03-name {
+    background-color: #fff;
+    display: inline-block;
+    padding: 0 20px;
+    color: #177139;
+    border: #177139 1px solid;
+    margin: 0 0 32px;
+
+    @include sp {
+      margin: 0 0 12px 12px;
+    }
+  }
+
+  &__section03-text {
+
+    @include sp {
+      margin: 0 0 40px 12px;
+    }
+  }
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
 
   &__ {}
 
