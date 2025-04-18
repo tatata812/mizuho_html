@@ -327,17 +327,58 @@ header
 .main-visual {
   background-color: #f2fbf7;
   position: relative;
-  padding: 0 0 80px;
+  padding: 0 0 32px;
   margin: 24px 0;
 
   @include tab {
-    padding: 0 0 12px;
+    padding: 0 0 16px;
     margin: 0 0 24px;
+  }
+
+  &__info-wrap {
+    padding: 0 12px;
+  }
+
+  &__info-inner {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 8px 40px;
+    border-radius: 40px;
+
+    @include tab {
+      border-radius: 8px;
+      padding: 16px;
+
+    }
+  }
+
+  &__info {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+
+    @include tab {
+      flex-direction: column;
+      gap: 4px;
+      align-items: flex-start;
+    }
+
+    span {
+      white-space: nowrap;
+    }
+
   }
 
   // スライダー
   &__slider-wrap {
     position: relative;
+    margin: 0 0 60px;
+
+    @include tab{
+      margin: 0 0 30px;
+
+    }
 
   }
 
