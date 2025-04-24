@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="email=no,telephone=no,address=no">
+  <!--!!!!!!!!!!!!!!!!!WPでは不要!!!!!!!!!!!!!!!!!!!!!-->
+  <title>白米の炊き方</title>
+  <meta name="description" content="<?php echo $des; ?>">
+  <!--!!!!!!!!!!!!!!!!!公開時、allに変更する!!!!!!!!!!!!!!!!!!!!!-->
+  <meta name="robots" content="none">
+  <meta property="og:type" content="website">
+  <meta property="og:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:description" content="<?php echo $des; ?>">
+  <meta property="og:site_name"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>assets/img/fb.jpg">
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta name="twitter:description" content="<?php echo $des; ?>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="assets/css/html5reset-1.6.1.css">
+  <link rel="stylesheet" href="assets/css/style.css?20230220">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="wrap">
+  <div class="black-bg"></div>
+  <header class="header">
+    <div class="header__inner">
+      <h1 class="header__ttl-wrap header__item"><a href="index.html" class="header__ttl"><img
+            src="assets/img/top/logo.svg" alt="みずほ屋"></a>
+      </h1>
+      <nav class="header__menu-wrap header__item">
+        <div class="header__menu-inner">
+          <a href="" class="header__menu active">取扱商品</a>
+          <a href="" class="header__menu">買い物ガイド</a>
+          <a href="" class="header__menu">よくある質問</a>
+          <a href="" class="header__menu">問い合わせ</a>
+          <a href="" class="header__menu">みずほ屋について</a>
+        </div>
+      </nav>
+      <div class="header__right-menu-wrap">
+        <!-- 検索 -->
+        <div class="header__right-menu"><span class="search-btn-js">検索</span>
+          <div class="header__search-wrap">
+            <form id="form" action="自分のサイトURL" method="get">
+              <input type="text" placeholder="検索ワードを入力">
+              <button type="submit">
+                <div id="s-btn">検索</div>
+              </button>
+            </form>
+            <div class="header__search-batsu">
+              ×
+            </div>
+          </div>
+        </div>
+        <!-- アカウント -->
+        <div class="header__right-menu header__right-menu--account"><span class="account-btn-js">アカウント</span>
+          <div class="header__account-wrap">
+            <div class="header__account-batsu">
+              ×
+            </div>
+            <a href="" class="header__account-item">マイページ</a>
+            <a href="" class="header__account-item">サインイン</a>
+            <a href="" class="header__account-item">新規会員登録</a>
+          </div>
+        </div>
+        <!-- カートボタン -->
+        <a href="" class="header__right-menu header__right-menu--cart">カート</a>
+      </div>
+      <div class="header__btn-wrap header__item open-btn-js" id="js-hamburger-menu">
+        <img src="assets/img/top/hun-btn.png" alt="">
+      </div>
+    </div>
+
+    <div class="header-sp">
+      <div class="header-sp__inner">
+        <div class="header-sp__btn-img">
+          <img src="assets/img/top/hun-btn-batsu.png" alt="閉じる">
+        </div>
+        <div class="header-sp__search-wrap">
+          <form id="form" action="自分のサイトURL" method="get">
+            <input type="text" placeholder="検索ワードを入力">
+            <button type="submit">
+              <div id="s-btn">検索</div>
+            </button>
+          </form>
+        </div>
+        <div class="header-sp__menu">
+          <a href="" class="header-sp__menu-item">カート</a>
+          <a href="" class="header-sp__menu-item">マイページ</a>
+          <a href="" class="header-sp__menu-item">サインイン</a>
+          <a href="" class="header-sp__menu-item header-sp__menu-item--margin">新規会員登録</a>
+          <a href="" class="header-sp__menu-item">取扱商品</a>
+          <a href="" class="header-sp__menu-item">- お米</a>
+          <a href="" class="header-sp__menu-item">- 厳選の食材や調味料</a>
+          <a href="" class="header-sp__menu-item">- オリジナルセット</a>
+          <a href="" class="header-sp__menu-item">- ギフト</a>
+          <a href="" class="header-sp__menu-item">- 季節商品</a>
+          <a href="" class="header-sp__menu-item header-sp__menu-item--margin">- 関連商品</a>
+          <a href="" class="header-sp__menu-ite">買い物ガイド</a>
+          <a href="" class="header-sp__menu-item">よくある質問</a>
+          <a href="" class="header-sp__menu-item">問い合わせ</a>
+          <a href="" class="header-sp__menu-item header-sp__menu-item--margin">みずほ屋について</a>
+          <a href="" class="header-sp__menu-item">プライバシーポリシー</a>
+          <a href="" class="header-sp__menu-item">特定商取引法に基づく表記</a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <div class="main page-hakumai subpage">
+    <div class="page-about__top">
+      <img src="assets/img/subpage/hakumai-top.jpg">
+    </div>
+    <div class="breadcrumbs-wrap">
+      <div class="breadcrumbs-wrap__content">HOME ／ ○○○○ ／ ○○○○</div>
+    </div>
+    <h1 class="subpage__ttl subpage__ttl--wrap">白米の炊き方</h1>
+
+    <section class="page-hakumai__section01">
+      <div class="page-hakumai__section01-top-img">
+        <img src="assets/img/subpage/hakumai-section01-top.png" alt="白米の炊き方">
+      </div>
+      <div class="page-hakumai__text-wrap">
+        <p class="page-hakumai__text">みなさん普段ご家庭で何気なくごはんを炊いていると思いますが、実は「炊飯」という作業
+          はとてもデリケートで、その炊き方によってごはんの炊き上がりが大きく変わってきます。<br>
+          最近の家庭用炊飯器は技術の進歩によりとても良くなっていますので、普通に炊いても上手に炊けます。<br>
+          ここではさらに美味しくごはんを炊くコツ、というより今更聞けない本来のお米の炊き方をみなさんに知ってもらいたいと思います。</p>
+      </div>
+      <h2 class="page-hakumai__subttl">1. 計量</h2>
+      <div class="page-hakumai__youtube-wrap">
+        <div class="page-hakumai__youtube">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/seKG0aGrDGw?si=OFmicRJQJ-13OKt8"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="page-hakumai__text-wrap">
+        <p class="page-hakumai__text">
+          炊きたいお米の量を正確に計量します。<br>
+          <span>カップに入れるお米はちょうど擦り切り一杯。</span>
+        </p>
+        <p class="page-hakumai__text page-hakumai__text--bg">一杯が約150ｇになりますが、はかりがあれば重量を正確に測ることをオススメします。</p>
+      </div>
+
+      <h2 class="page-hakumai__subttl">2. 洗米</h2>
+      <div class="page-hakumai__youtube-wrap">
+        <div class="page-hakumai__youtube">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/pPwvggzZuEc?si=uDacjoH42fcE5BeI"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="page-hakumai__text-wrap">
+        <p class="page-hakumai__text">
+          お米に水を加えたら手早く2~3回かき回し、すぐに水を捨てます。 水を加えた時点からお米は吸水を始めているので、<br class="pc-block">
+          <span>最初の濁った水はすぐに替えることが大切です。</span>
+        </p>
+        <p class="page-hakumai__text">
+          お米よりも少し多めの水を入れた状態で、両手でお米同士をこすり合わせるように研ぎます。<br>
+          <span>お米表面を磨くイメージで優しくお米を洗ってあげて下さい。</span><br>
+          割れたお米が多くなり過ぎるとベちゃっとしたごはんになってしまいます。
+        </p>
+        <p class="page-hakumai__text">濁った水を替えては手早く研ぐ、という作業を濁りが薄くなるまで繰り返します。</p>
+        <p class="page-hakumai__text page-hakumai__text--bg">
+          水が透明になるまで研ぐ必要はありません。研ぎすぎると割れが多くなるばかりでなく、米のうまみ成分も失われ、ごはんが美味しくなくなってしまいます。</p>
+      </div>
+
+      <h2 class="page-hakumai__subttl">3.加水と浸漬</h2>
+      <div class="page-hakumai__youtube-wrap">
+        <div class="page-hakumai__youtube">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/aoRc5qNua_M?si=O5iysV6mEdx8Uov2"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="page-hakumai__text-wrap">
+        <p class="page-hakumai__text">
+          <span>お米の重量に対して1.4倍の量の水が最適。</span>
+          お米と水を火にかける前に、お米に水を吸わせるための浸漬時間をとる必要があります。<br>
+          <span class="page-hakumai__span-purple">約1時間</span>浸漬する事が出来ればお米の中心部までしっかりと吸水するでしょう。
+        </p>
+        <p class="page-hakumai__text">
+          完全に吸水したお米は、キレイに全体が真っ白になります。<br>
+          吸水が不十分だと、熱が中心部まで伝わらずに芯の残ったごはんになってしまいます。
+        </p>
+        <p class="page-hakumai__text page-hakumai__text--bg">一般的な電気炊飯器には、プログラムの中に浸漬時間も10~15分程度含まれていますので、それを考慮する必要があります。
+        </p>
+      </div>
+
+      <h2 class="page-hakumai__subttl">4.加熱・蒸らし</h2>
+      <div class="page-hakumai__youtube-wrap">
+        <img src="assets/img/subpage/hakumai01.png" alt="加熱・蒸らし">
+      </div>
+      <div class="page-hakumai__text-wrap">
+        <p class="page-hakumai__text">
+          熱を加えれば良いというものではなく、<br class="pc-block">
+          <span>最初は弱火でゆっくりと</span><br class="pc-block">
+          温度を上げていき、沸騰したらその温度を維持して、火加減を調整しながら煮る、蒸す、焼くという工程を経てごはんが炊き上がります。
+        </p>
+        <p class="page-hakumai__text">
+          今は家庭用電気炊飯器がスイッチひとつで全てをやってくれるので、おいしくご飯が炊けているというわけです。
+        </p>
+        <p class="page-hakumai__text">炊飯器のプログラムには、蒸らし時間も10分~15分入っていますが、<br class="pc-block">できれば<span
+            class="page-hakumai__span-purple">20〜30分とれるとふっくらした炊き上がり</span>になります。</p>
+      </div>
+
+      <h2 class="page-hakumai__subttl">5. ほぐし</h2>
+      <div class="page-hakumai__youtube-wrap">
+        <div class="page-hakumai__youtube">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/8-mU0rB988I?si=SRQ-M3Y9zjzyrO0Z"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="page-hakumai__text-wrap">
+        <p class="page-hakumai__text">
+          蒸らしが終わった後に、飯粒表面の余分な水分を飛ばすために<br class="pc-block"><span>ごはんをほぐします。</span>
+        </p>
+        <p class="page-hakumai__text">
+          ごはんの粒をつぶさないよう、しゃもじで切るようにして全体をほぐし、水蒸気を逃がします。
+        </p>
+        <p class="page-hakumai__text page-hakumai__text--bg">ほぐしを行わないと、時間が経つとべたついたごはんになってしまいます。</p>
+      </div>
+    </section>
+
+    <section class="page-hakumai__section02">
+      <div class="page-hakumai__text-wrap page-hakumai__text-wrap--margin">
+        <p class="page-hakumai__text">
+          上記の手順と注意点に気を付けて炊飯を行えば、おいしいごはんが炊き上がると思います。<br>
+          ただ厳密に言うと、お米の産地や品種、その年産によっても米の質が異なります。<br>
+          ということは、そのお米に合った炊き方というものもそれぞれ違うわけで、やはり炊飯は繰り返し行っていくうちにそれぞれの加減を掴んでもらうのが一番です。<br>
+          皆さんも毎度ごはんを炊く度に、その炊き上がりを比べてみて、ご家庭の炊飯のプロになって下さい。
+        </p>
+      </div>
+    </section>
+  </div>
+  <!--main end-->
+
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__top-inner">
+        <div class="footer__top-left">
+          <a href="" class="footer__ttl"><img src="assets/img/top/logo.svg" alt="みずほ屋"></a>
+          <div class="footer__tel-wrap">
+            <p class="footer__tel-text footer__tel-text--top">電話でのご注文は</p>
+            <a href="tel:083-922-1550" class="footer__tel"><img src="assets/img/top/footer-tel.png" alt=""></a>
+            <p class="footer__tel-text">（9:00-17:00 土・日・祝日を除く）</p>
+          </div>
+        </div>
+        <div class="footer__top-right">
+          <div class="footer__nav-left">
+            <a href="" class="footer__nav-item">取扱商品</a>
+            <a href="" class="footer__nav-item">- お米</a>
+            <a href="" class="footer__nav-item">- 厳選の食材や調味料</a>
+            <a href="" class="footer__nav-item">- オリジナルセット</a>
+            <a href="" class="footer__nav-item">- ギフト</a>
+            <a href="" class="footer__nav-item">- 季節商品</a>
+            <a href="" class="footer__nav-item">- 関連商品</a>
+          </div>
+          <div class="footer__nav-right">
+            <a href="guide.html" class="footer__nav-item">買い物ガイド</a>
+            <a href="voice.html" class="footer__nav-item">よくある質問</a>
+            <a href="contact.html" class="footer__nav-item">問い合わせ</a>
+            <a href="mizuhomai.html" class="footer__nav-item footer__nav-item--margin">みずほ屋について</a>
+            <a href="privacy.html" class="footer__nav-item">プライバシーポリシー</a>
+            <a href="order.html" class="footer__nav-item">特定商取引法に基づく表記</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      &copy;みずほ屋
+    </div>
+    <a href="#" class="footer__go-to-btn top-to-js"><img src="assets/img/top/go-top-btn.png" alt=""></a>
+  </footer>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="assets/js/main.js">
+  </script>
+</body>
+
+</html>
