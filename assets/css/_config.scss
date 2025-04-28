@@ -597,6 +597,23 @@ textarea {
       right: 15px;
     }
   }
+
+  &--orange {
+    color: #f15a24;
+    border: #f15a24 2px solid;
+    width: 320px;
+
+    @include tab {
+      width: 280px;
+    }
+
+    &:after {
+      /* 擬似要素で矢印アイコンをつくる */
+
+      border-top: solid 2px #f15a24;
+      border-right: solid 2px #f15a24;
+    }
+  }
 }
 
 /* slickドット */

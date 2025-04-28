@@ -676,6 +676,13 @@
     @include tab {
       gap: 8px;
     }
+
+
+    &--section05 {
+      align-items: flex-start;
+    }
+
+
   }
 
   &__section-ttl-img {
@@ -690,12 +697,37 @@
     font-size: 30px;
     border-bottom: #177139 1px solid;
     flex: 1;
-    padding: 0 0 18px;
+    padding: 0 0 12px;
 
     @include tab {
       font-size: 22px;
       padding: 0 0 3px;
     }
+
+    &--orange {
+      border-bottom: #fab153 1px solid;
+    }
+  }
+
+  &__section-ttl-bottom {
+    color: #fab153;
+    font-size: 24px;
+    padding: 12px 0;
+    border-bottom: #fab153 1px solid;
+    font-weight: bold;
+
+    @include sp {
+      font-size: 16px;
+      padding: 12px 0 0;
+      border-bottom: none;
+
+    }
+
+  }
+
+  &__section-ttl-text-wrap {
+    flex: 1;
+
   }
 
   &__inner {
@@ -735,6 +767,10 @@
     a {
       color: #2cb573;
       border-bottom: #848484 1px solid;
+    }
+
+    span {
+      color: #f15a24;
     }
   }
 
@@ -801,6 +837,16 @@
       background-color: #f2fbf7;
     }
   }
+
+  &__btn {
+    text-align: center;
+    margin: 80px 0 -40px;
+
+    @include tab {
+      margin: 60px 0 -40px;
+
+    }
+  }
 }
 
 
@@ -814,7 +860,7 @@
   }
 
   &__inner {
-    max-width: 400px;
+    max-width: 540px;
     margin: 0 auto;
     display: flex;
     gap: 32px;
@@ -823,22 +869,23 @@
 
     @include sp {
       gap: 12px;
-      max-width: 320px;
+      max-width: 280px;
+      flex-wrap: wrap;
 
     }
 
     @include tab {
-      gap: 8px;
+      gap: 12px;
     }
   }
 
   &__item {
 
-    width: calc((100% - 96px) / 4);
+    width: calc((100% - 128px) / 5);
 
 
     @include sp {
-      width: calc((100% - 24px) / 4);
+      width: calc((100% - 24px) / 3);
 
     }
 
@@ -1618,7 +1665,7 @@
     max-width: 700px;
     margin: 40px auto;
 
-    @include tab{
+    @include tab {
       margin: 24px auto;
     }
   }
@@ -1661,11 +1708,11 @@
       background-color: #f1f1f1;
       padding: 12px;
       border-radius: 6px;
-      margin: 40px 0 0!important;
+      margin: 40px 0 0 !important;
 
       @include tab {
         padding: 8px;
-      margin: 24px 0 0!important;
+        margin: 24px 0 0 !important;
       }
     }
   }
@@ -1677,8 +1724,8 @@
     margin: 0 auto 24px;
     padding: 0 0 4px;
 
-    @include tab{
-    font-size: 20px;
+    @include tab {
+      font-size: 20px;
     }
   }
 
@@ -1713,3 +1760,257 @@
     }
   }
 }
+
+
+/* =================================
+定期購入について
+ ================================= */
+
+.page-subscription {
+  margin: 80px 0 24px;
+
+  @include tab {
+    margin: 0;
+    margin: 53px 0 24px;
+  }
+
+  &__section {
+
+    &--bg {
+      background-color: #fff8ee;
+    }
+  }
+
+  &__section-inner {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 80px 0;
+
+    @include tab {
+      padding: 40px 0;
+    }
+  }
+
+  &__section-ttl-wrap {
+    display: flex;
+    max-width: 920px;
+    margin: 0 auto 40px;
+    align-items: center;
+    gap: 18px;
+    padding: 0 12px;
+
+    @include tab {
+      gap: 8px;
+    }
+
+
+    &--section05 {
+      align-items: flex-start;
+    }
+
+
+  }
+
+  &__section-ttl-img {
+    width: 100px;
+
+    @include tab {
+      width: 50px;
+    }
+  }
+
+  &__section-ttl {
+    font-size: 30px;
+    border-bottom: #fab153 1px solid;
+    flex: 1;
+    padding: 0 0 12px;
+
+    @include tab {
+      font-size: 22px;
+      padding: 0 0 3px;
+    }
+
+  }
+
+  &__section-ttl-bottom {
+    color: #fab153;
+    font-size: 24px;
+    padding: 12px 0;
+    border-bottom: #fab153 1px solid;
+    font-weight: bold;
+
+    @include sp {
+      font-size: 16px;
+      padding: 12px 0 0;
+      border-bottom: none;
+
+    }
+
+  }
+
+  &__section-ttl-text-wrap {
+    flex: 1;
+
+  }
+
+  &__inner {
+    margin: 0 0 0 117px;
+    padding: 0 12px 0 0;
+
+    @include tab {
+      margin: 0;
+      padding: 0 12px;
+    }
+
+    &--bg {
+      margin: 0 16px 32px 77px;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 24px;
+
+      @include tab {
+        margin: 0 16px 24px;
+        padding: 12px;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  &__section-sub-ttl {
+    color: #ff9933;
+    border: #ff9933 1px solid;
+    padding: 0 12px;
+    display: inline-block;
+    font-size: 18px;
+    margin: 0 0 16px;
+
+    @include sp {
+      font-size: 16px;
+    }
+  }
+
+  &__section-text-wrap {
+    margin: 0 0 40px;
+  }
+
+  &__section-text {
+    margin: 0 0 16px;
+
+    &:last-of-type {
+      margin: 0;
+    }
+
+    a {
+      color: #2cb573;
+      border-bottom: #848484 1px solid;
+    }
+
+    span {
+      color: #f15a24;
+    }
+  }
+
+
+  &__hyo-wrap {
+    margin: 0 0 24px;
+
+    @include tab {
+      overflow-x: scroll;
+    }
+  }
+
+  &__hyo {
+
+    @include tab {
+      width: 760px;
+    }
+  }
+
+  &__section-table {
+    max-width: 500px;
+    margin: 0 auto 40px;
+
+    @include tab {
+      margin: 0 auto 24px;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    table,
+    td,
+    th {
+      border: 1px solid #177139;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    td,
+    th {
+      padding: 4px 10px;
+      width: 50%;
+
+      @include sp {
+        padding: 4px 6px;
+      }
+    }
+
+    th {
+      background-color: #f2fbf7;
+    }
+  }
+
+  &__btn {
+    text-align: center;
+  }
+
+  &__section01-box {
+    max-width: 720px;
+    margin: 0 auto 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+  
+  @include tab{
+  gap: 16px;
+  margin: 0 auto 40px;
+
+  }
+  
+  }
+
+  &__section01-item {
+    background-color: #fff8ee;
+    width: calc((100% - 32px) / 2);
+    border: #ff9933 1px solid;
+    border-radius: 12px;
+
+    @include tab{
+    width: 100%;
+    max-width: 320px;
+    }
+  }
+
+  &__section01-top-wrap {
+    padding: 12px 16px;
+    background-color: #fff;
+    border-radius: 12px 12px 0 0;
+  }
+
+  &__section01-img {
+    width: 50px;
+    margin: 0 0 12px;
+  }
+
+  &__section01-ttl {
+    font-size: 18px;
+  }
+
+  &__section01-bottom-wrap {
+    padding: 12px 16px;
+  }
+}
+
+
