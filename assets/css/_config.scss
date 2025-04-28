@@ -663,10 +663,17 @@ textarea {
     display: block;
     margin: 0 auto;
   }
-
+  
   .alignright {
-    display: block;
-    margin-left: auto;
+    float: right;
+  }
+  
+  .alignleft {
+    float: left;
+  }
+
+  img {
+    width: auto;
   }
 
   p {

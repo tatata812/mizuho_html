@@ -575,8 +575,13 @@ textarea {
   margin: 0 auto;
 }
 .page-style .alignright {
-  display: block;
-  margin-left: auto;
+  float: right;
+}
+.page-style .alignleft {
+  float: left;
+}
+.page-style img {
+  width: auto;
 }
 .page-style p {
   margin: 0 0 12px;
