@@ -1771,7 +1771,7 @@
 
   @include tab {
     margin: 0;
-    margin: 53px 0 24px;
+    margin: 53px 0 0;
   }
 
   &__section {
@@ -1803,12 +1803,9 @@
       gap: 8px;
     }
 
-
     &--section05 {
       align-items: flex-start;
     }
-
-
   }
 
   &__section-ttl-img {
@@ -1829,7 +1826,6 @@
       font-size: 22px;
       padding: 0 0 3px;
     }
-
   }
 
   &__section-ttl-bottom {
@@ -1843,14 +1839,11 @@
       font-size: 16px;
       padding: 12px 0 0;
       border-bottom: none;
-
     }
-
   }
 
   &__section-ttl-text-wrap {
     flex: 1;
-
   }
 
   &__inner {
@@ -1892,7 +1885,7 @@
   &__section-text-wrap {
     margin: 0 0 40px;
 
-    &--margin  {
+    &--margin {
       margin: 0;
     }
   }
@@ -1904,64 +1897,8 @@
       margin: 0;
     }
 
-    a {
-      color: #2cb573;
-      border-bottom: #848484 1px solid;
-    }
-
     span {
       color: #f15a24;
-    }
-  }
-
-
-  &__hyo-wrap {
-    margin: 0 0 24px;
-
-    @include tab {
-      overflow-x: scroll;
-    }
-  }
-
-  &__hyo {
-
-    @include tab {
-      width: 760px;
-    }
-  }
-
-  &__section-table {
-    max-width: 500px;
-    margin: 0 auto 40px;
-
-    @include tab {
-      margin: 0 auto 24px;
-    }
-
-    table {
-      width: 100%;
-    }
-
-    table,
-    td,
-    th {
-      border: 1px solid #177139;
-      border-collapse: collapse;
-      text-align: left;
-    }
-
-    td,
-    th {
-      padding: 4px 10px;
-      width: 50%;
-
-      @include sp {
-        padding: 4px 6px;
-      }
-    }
-
-    th {
-      background-color: #f2fbf7;
     }
   }
 
@@ -1976,13 +1913,11 @@
     flex-wrap: wrap;
     gap: 32px;
     justify-content: center;
-  
-  @include tab{
-  gap: 16px;
-  margin: 0 auto 40px;
 
-  }
-  
+    @include tab {
+      gap: 16px;
+      margin: 0 auto 40px;
+    }
   }
 
   &__section01-item {
@@ -1991,9 +1926,9 @@
     border: #ff9933 1px solid;
     border-radius: 12px;
 
-    @include tab{
-    width: 100%;
-    max-width: 320px;
+    @include tab {
+      width: 100%;
+      max-width: 320px;
     }
   }
 
@@ -2015,6 +1950,46 @@
   &__section01-bottom-wrap {
     padding: 12px 16px;
   }
+
+  &__section04-box {
+    border: #0e884d 1px solid;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 40px auto 0;
+    padding: 24px;
+
+    @include sp {
+      padding: 12px;
+      border-radius: 8px;
+      margin: 24px auto 0;
+    }
+  }
+
+  &__section04-text {
+    margin: 40px 0;
+
+    @include sp {
+      margin: 24px 0;
+    }
+  }
+
+  &__section04-tel {
+    width: 200px;
+    display: inline-block;
+    margin: 0 40px 0;
+
+    @include sp {
+      display: block;
+      margin: 0 0 8px;
+    }
+  }
+
+  &__list {
+    padding: 0 16px 0 20px;
+  }
+
+  &__list-item {
+    list-style: disc;
+    margin: 0 0 12px;
+  }
 }
-
-

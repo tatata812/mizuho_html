@@ -2232,7 +2232,7 @@ textarea {
 @media (max-width: 820px) {
   .page-subscription {
     margin: 0;
-    margin: 53px 0 24px;
+    margin: 53px 0 0;
   }
 }
 .page-subscription__section--bg {
@@ -2349,58 +2349,8 @@ textarea {
 .page-subscription__section-text:last-of-type {
   margin: 0;
 }
-.page-subscription__section-text a {
-  color: #2cb573;
-  border-bottom: #848484 1px solid;
-}
 .page-subscription__section-text span {
   color: #f15a24;
-}
-.page-subscription__hyo-wrap {
-  margin: 0 0 24px;
-}
-@media (max-width: 820px) {
-  .page-subscription__hyo-wrap {
-    overflow-x: scroll;
-  }
-}
-@media (max-width: 820px) {
-  .page-subscription__hyo {
-    width: 760px;
-  }
-}
-.page-subscription__section-table {
-  max-width: 500px;
-  margin: 0 auto 40px;
-}
-@media (max-width: 820px) {
-  .page-subscription__section-table {
-    margin: 0 auto 24px;
-  }
-}
-.page-subscription__section-table table {
-  width: 100%;
-}
-.page-subscription__section-table table,
-.page-subscription__section-table td,
-.page-subscription__section-table th {
-  border: 1px solid #177139;
-  border-collapse: collapse;
-  text-align: left;
-}
-.page-subscription__section-table td,
-.page-subscription__section-table th {
-  padding: 4px 10px;
-  width: 50%;
-}
-@media (max-width: 600px) {
-  .page-subscription__section-table td,
-  .page-subscription__section-table th {
-    padding: 4px 6px;
-  }
-}
-.page-subscription__section-table th {
-  background-color: #f2fbf7;
 }
 .page-subscription__btn {
   text-align: center;
@@ -2445,6 +2395,46 @@ textarea {
 }
 .page-subscription__section01-bottom-wrap {
   padding: 12px 16px;
+}
+.page-subscription__section04-box {
+  border: #0e884d 1px solid;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 40px auto 0;
+  padding: 24px;
+}
+@media (max-width: 600px) {
+  .page-subscription__section04-box {
+    padding: 12px;
+    border-radius: 8px;
+    margin: 24px auto 0;
+  }
+}
+.page-subscription__section04-text {
+  margin: 40px 0;
+}
+@media (max-width: 600px) {
+  .page-subscription__section04-text {
+    margin: 24px 0;
+  }
+}
+.page-subscription__section04-tel {
+  width: 200px;
+  display: inline-block;
+  margin: 0 40px 0;
+}
+@media (max-width: 600px) {
+  .page-subscription__section04-tel {
+    display: block;
+    margin: 0 0 8px;
+  }
+}
+.page-subscription__list {
+  padding: 0 16px 0 20px;
+}
+.page-subscription__list-item {
+  list-style: disc;
+  margin: 0 0 12px;
 }
 
 /* =================================
