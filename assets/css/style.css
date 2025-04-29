@@ -2340,6 +2340,9 @@ textarea {
 .page-subscription__section-text-wrap {
   margin: 0 0 40px;
 }
+.page-subscription__section-text-wrap--margin {
+  margin: 0;
+}
 .page-subscription__section-text {
   margin: 0 0 16px;
 }

@@ -1891,6 +1891,10 @@
 
   &__section-text-wrap {
     margin: 0 0 40px;
+
+    &--margin  {
+      margin: 0;
+    }
   }
 
   &__section-text {
